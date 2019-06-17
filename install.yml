@@ -1,0 +1,40 @@
+---
+- hosts: localhost
+  tasks:
+    # clock
+    - name: set up the clock
+      command: timedatectl set-ntp true
+
+    # partitioning
+    - name: partition the disk
+      command: echo "disk partitioning"
+
+    # formatting paritions
+    # - name: format boot partition
+    #   command: mkfs.vfat /dev/sda1
+    # - name: format swap partition
+    #   command: mkswap /dev/sda2
+    # - name: format main partition
+    #   command: mkfs.ext4 /dev/sda3
+    # - name: enable swap
+    #   command: swapon /dev/sda2
+
+    # # mounting
+    # - name: mount main partition
+    #   command: mount /dev/sda3 /mnt
+    # - name: create boot dir
+    #   command: mkdir /mnt/boot
+    # - name: mount boot
+    #   command: mount /dev/sda1 /mnt/boot
+
+    # # setting repository mirror
+    # - name: set repository mirror
+    #   command: echo Server = http://mirror.datacenter.by/pub/archlinux/$repo/os/$arch >> /etc/pacman.d/mirrorlist
+
+    # # installing packages
+    # - name: install base packages
+    #   command: pacstrap /mnt base
+
+    # # generating fstab
+    # - name: generate fstab
+    #   command: genfstab -U /mnt >> /mnt/etc/fstab
