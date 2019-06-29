@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # set up the clock
 timedatectl set-ntp true &&
 
@@ -35,12 +37,39 @@ mkdir /mnt/boot &&
 mount /dev/sda1 /mnt/boot &&
 
 # set repository mirror
-echo Server = http://mirror.datacenter.by/pub/archlinux/$repo/os/$arch >> /etc/pacman.d/mirrorlist &&
+echo Server = http://mirror.datacenter.by/pub/archlinux/$repo/os/$arch > /etc/pacman.d/mirrorlist &&
 
 # install base packages
-pacstrap /mnt base ansible git &&
+pacstrap /mnt base ansible git vim sudo &&
 
 # generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab &&
 
-echo "Arch linux was installed successfully"
+cat << EOF | arch-chroot /mnt
+
+# setting up a time
+ln -sf /usr/share/zoneinfo/Europe/Minsk /etc/localtime &&
+hwclock --systohc &&
+
+# localization
+echo "en_US.UTF-8 UTF-8" > /etc/locale.gen &&
+locale-gen &&
+echo LANG=en_US.UTF-8 >> /etc/locale.conf &&
+
+# network
+echo "personal" > /etc/hostname &&
+printf "127.0.0.1 localhost\n::1 localhost\n127.0.1.1 personal.localdomain personal" > /etc/hosts &&
+systemctl enable dhcpcd &&
+
+# bootloader
+bootctl install &&
+printf "default arch\ntimeout 4" > /boot/loader/loader.conf &&
+printf "title Arch Linux\nlinux /vmlinuz-linux\ninitrd /initramfs-linux.img\noptions root=UUID=$(blkid -s UUID -o value /dev/sda3) rw" > /boot/loader/entries/arch.conf &&
+
+# users
+echo root:$3 | chpasswd &&
+useradd -m -G wheel $1 &&
+echo $1:$2 | chpasswd &&
+echo 'wheel ALL=(ALL) ALL' | EDITOR='tee -a' visudo
+
+EOF
