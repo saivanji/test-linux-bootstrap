@@ -49,8 +49,12 @@
 
     # installing packages
     - name: install base packages
-      command: pacstrap /mnt base
+      command: pacstrap /mnt base ansible git
 
     # generating fstab
     - name: generate fstab
       command: genfstab -U /mnt >> /mnt/etc/fstab
+
+    ### Post setup
+
+    # - name: chroot into a system
