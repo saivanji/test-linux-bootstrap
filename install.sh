@@ -37,7 +37,7 @@ mkdir /mnt/boot &&
 mount /dev/sda1 /mnt/boot &&
 
 # set repository mirror
-echo Server = http://mirror.datacenter.by/pub/archlinux/$repo/os/$arch > /etc/pacman.d/mirrorlist &&
+echo Server = http://mirror.datacenter.by/pub/archlinux/\$repo/os/\$arch > /etc/pacman.d/mirrorlist &&
 
 # install base packages
 pacstrap /mnt base ansible git vim sudo &&
