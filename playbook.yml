@@ -15,9 +15,8 @@
       register: user_pass
       no_log: yes
       when: initial_load == True
-    - set_fact:
-        root_pass: "{{ root_pass.user_input }}"
-        user_pass: "{{ user_pass.user_input }}"
+    - set_fact: root_pass="{{ root_pass.user_input }}" user_pass="{{ user_pass.user_input }}"
+      when: initial_load == True
   roles:
     - { role: boot }
     - { role: network }
