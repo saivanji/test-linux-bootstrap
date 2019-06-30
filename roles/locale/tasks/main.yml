@@ -1,4 +1,5 @@
 ---
+# adds multiple utf-8 entries in file
 - name: UTF-8 locale
   locale_gen:
     name: en_US.UTF-8
