@@ -1,6 +1,10 @@
 ---
-# adds multiple utf-8 entries in file
-- name: UTF-8 locale
+- name: put locale.gen file
+  copy:
+    src: locale.gen
+    dest: /etc/locale.gen
+
+- name: generate UTF-8 locale
   locale_gen:
     name: en_US.UTF-8
     state: present
