@@ -4,3 +4,4 @@
   roles:
     - { role: base }
     - { role: boot }
+    - { role: network }
