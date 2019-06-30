@@ -2,8 +2,6 @@
 - hosts: localhost
   # become: yes
   pre_tasks:
-    - command: blkid -s UUID -o value /dev/sda3
-      register: root_uuid
     - set_fact: initial_load="{{ lookup('env', 'INITIAL_LOAD') }}"
     - pause:
         prompt: "Give root password"
@@ -12,7 +10,6 @@
       no_log: yes
       when: initial_load == True
   roles:
-    - { role: base }
     - { role: boot }
     - { role: network }
     - { role: time }

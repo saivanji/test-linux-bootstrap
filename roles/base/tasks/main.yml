@@ -1,4 +1,0 @@
----
-- name: UUID of root partition
-  debug:
-    msg: UUID - "{{ root_uuid }}"
