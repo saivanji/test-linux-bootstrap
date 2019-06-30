@@ -1,7 +1,8 @@
 ---
 - name: install bootloader
   command: bootctl install
-  creates: /boot/EFI/
+  args:
+    creates: /boot/EFI/
 
 - name: create loader.conf
   copy:
