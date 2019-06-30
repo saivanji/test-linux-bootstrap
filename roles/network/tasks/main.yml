@@ -1,0 +1,17 @@
+---
+- name: setup hostname
+  lineinfile:
+    path: /etc/hostname
+    line: personal
+    state: present
+
+- name: setup hosts
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+
+- name: enable dhcpcd service
+  systemd:
+    name: dhcpcd
+    state: started
+    enabled: yes

@@ -68,15 +68,6 @@ rm -rf /root/bootstrap
 # locale-gen &&
 # echo LANG=en_US.UTF-8 > /etc/locale.conf &&
 
-# # network
-# echo "personal" > /etc/hostname &&
-# printf "127.0.0.1 localhost\n::1 localhost\n127.0.1.1 personal.localdomain personal" > /etc/hosts &&
-# systemctl enable dhcpcd &&
-
-# # bootloader
-# bootctl install &&
-# printf "default arch\ntimeout 4" > /boot/loader/loader.conf &&
-# printf "title Arch Linux\nlinux /vmlinuz-linux\ninitrd /initramfs-linux.img\noptions root=UUID=$(blkid -s UUID -o value /dev/sda3) rw" > /boot/loader/entries/arch.conf &&
 
 # # users
 # echo root:$3 | chpasswd &&
