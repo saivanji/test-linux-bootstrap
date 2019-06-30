@@ -59,15 +59,6 @@ rm -rf /root/bootstrap
 
 
 
-# # setting up a time
-# ln -sf /usr/share/zoneinfo/Europe/Minsk /etc/localtime &&
-# hwclock --systohc &&
-
-# # localization
-# echo "en_US.UTF-8 UTF-8" > /etc/locale.gen &&
-# locale-gen &&
-# echo LANG=en_US.UTF-8 > /etc/locale.conf &&
-
 
 # # users
 # echo root:$3 | chpasswd &&

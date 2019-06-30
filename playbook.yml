@@ -5,3 +5,5 @@
     - { role: base }
     - { role: boot }
     - { role: network }
+    - { role: time }
+    - { role: locale }

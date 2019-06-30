@@ -1,0 +1,11 @@
+---
+- name: set timezone
+  file:
+    src: /usr/share/zoneinfo/Europe/Minsk
+    dest: /etc/localtime
+    state: link
+
+- name: generate adjtime
+  command: hwclock --systohc
+  args:
+    creates: /etc/adjtime

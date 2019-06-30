@@ -1,0 +1,10 @@
+---
+- name: UTF-8 locale
+  locale_gen:
+    name: en_US.UTF-8
+    state: present
+
+- name: locale.conf file
+  copy:
+    src: locale.conf
+    dest: /etc/locale.conf
