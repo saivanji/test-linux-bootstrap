@@ -9,6 +9,15 @@
       register: root_pass
       no_log: yes
       when: initial_load == True
+    - pause:
+        prompt: "Give user password"
+        echo: no
+      register: user_pass
+      no_log: yes
+      when: initial_load == True
+    - set_fact:
+        root_pass: "{{ root_pass.user_input }}"
+        user_pass: "{{ user_pass.user_input }}"
   roles:
     - { role: boot }
     - { role: network }
