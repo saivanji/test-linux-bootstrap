@@ -1,9 +1,8 @@
 ---
 - name: setup hostname
-  lineinfile:
-    path: /etc/hostname
-    line: personal
-    state: present
+  template:
+    src: hostname.j2
+    dest: /etc/hostname
 
 - name: setup hosts
   template:
