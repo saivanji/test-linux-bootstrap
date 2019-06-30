@@ -45,31 +45,43 @@ pacstrap /mnt base ansible git vim sudo &&
 # generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab &&
 
+# copy installation files to the root dir
+cp -r $(dirname "$0") /mnt/root/bootstrap/ &&
+
 cat << EOF | arch-chroot /mnt
 
-# setting up a time
-ln -sf /usr/share/zoneinfo/Europe/Minsk /etc/localtime &&
-hwclock --systohc &&
+# run playbook
+ansible-playbook /root/bootstrap/playbook.yml &&
 
-# localization
-echo "en_US.UTF-8 UTF-8" > /etc/locale.gen &&
-locale-gen &&
-echo LANG=en_US.UTF-8 >> /etc/locale.conf &&
+# remove bootstrap
+rm -rf /root/bootstrap
 
-# network
-echo "personal" > /etc/hostname &&
-printf "127.0.0.1 localhost\n::1 localhost\n127.0.1.1 personal.localdomain personal" > /etc/hosts &&
-systemctl enable dhcpcd &&
 
-# bootloader
-bootctl install &&
-printf "default arch\ntimeout 4" > /boot/loader/loader.conf &&
-printf "title Arch Linux\nlinux /vmlinuz-linux\ninitrd /initramfs-linux.img\noptions root=UUID=$(blkid -s UUID -o value /dev/sda3) rw" > /boot/loader/entries/arch.conf &&
 
-# users
-echo root:$3 | chpasswd &&
-useradd -m -G wheel $1 &&
-echo $1:$2 | chpasswd &&
-echo 'wheel ALL=(ALL) ALL' | EDITOR='tee -a' visudo
+
+# # setting up a time
+# ln -sf /usr/share/zoneinfo/Europe/Minsk /etc/localtime &&
+# hwclock --systohc &&
+
+# # localization
+# echo "en_US.UTF-8 UTF-8" > /etc/locale.gen &&
+# locale-gen &&
+# echo LANG=en_US.UTF-8 > /etc/locale.conf &&
+
+# # network
+# echo "personal" > /etc/hostname &&
+# printf "127.0.0.1 localhost\n::1 localhost\n127.0.1.1 personal.localdomain personal" > /etc/hosts &&
+# systemctl enable dhcpcd &&
+
+# # bootloader
+# bootctl install &&
+# printf "default arch\ntimeout 4" > /boot/loader/loader.conf &&
+# printf "title Arch Linux\nlinux /vmlinuz-linux\ninitrd /initramfs-linux.img\noptions root=UUID=$(blkid -s UUID -o value /dev/sda3) rw" > /boot/loader/entries/arch.conf &&
+
+# # users
+# echo root:$3 | chpasswd &&
+# useradd -m -G wheel $1 &&
+# echo $1:$2 | chpasswd &&
+# echo '%wheel ALL=(ALL) ALL' | EDITOR='tee -a' visudo
 
 EOF

@@ -1,0 +1,14 @@
+---
+- name: install bootloader
+  command: bootctl install
+  creates: /boot/EFI/
+
+- name: create loader.conf
+  copy:
+    src: loader.conf
+    dest: /boot/loader/loader.conf
+
+- name: create arch.conf
+  template:
+    src: arch.conf.j2
+    dest: /boot/loader/entries/arch.conf

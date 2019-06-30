@@ -1,0 +1,4 @@
+---
+- name: UUID of root partition
+  command: blkid -s UUID -o value /dev/sda3
+  register: root_uuid
