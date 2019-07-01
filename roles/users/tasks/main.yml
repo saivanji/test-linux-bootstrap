@@ -1,0 +1,21 @@
+---
+- name: create a user
+  user:
+    name: "{{ user.name }}"
+    groups: wheel
+    create_home: yes
+    password: "{{ user_password|password_hash('sha512') }}"
+    update_password: on_create
+    state: present
+
+- name: install sudo
+  pacman:
+    name: sudo
+    state: present
+
+- name: copy sudoers
+  copy:
+    src: sudoers
+    dest: /etc/sudoers
+    mode: 440
+    validate: "visudo -cf %s"

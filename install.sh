@@ -54,16 +54,9 @@ cat << EOF | arch-chroot /mnt
 ansible-playbook /root/bootstrap/playbook.yml &&
 
 # remove bootstrap
-rm -rf /root/bootstrap
+rm -rf /root/bootstrap &&
 
-
-
-
-
-# # users
-# echo root:$3 | chpasswd &&
-# useradd -m -G wheel $1 &&
-# echo $1:$2 | chpasswd &&
-# echo '%wheel ALL=(ALL) ALL' | EDITOR='tee -a' visudo
+# set root password
+passwd
 
 EOF

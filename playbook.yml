@@ -4,21 +4,16 @@
   pre_tasks:
     - set_fact: initial_load="{{ lookup('env', 'INITIAL_LOAD') }}"
     - pause:
-        prompt: "Give root password"
-        echo: no
-      register: root_pass
-      no_log: yes
-      when: initial_load == True
-    - pause:
         prompt: "Give user password"
         echo: no
       register: user_pass
       no_log: yes
       when: initial_load == True
-    - set_fact: root_pass="{{ root_pass.user_input }}" user_pass="{{ user_pass.user_input }}"
+    - set_fact: user_pass="{{ user_pass.user_input }}"
       when: initial_load == True
   roles:
     - { role: boot }
     - { role: network }
     - { role: time }
     - { role: locale }
+    - { role: users }
