@@ -1,6 +1,31 @@
 ---
-- name: copy .bashrc
-  become_user: "{{ user.name }}"
-  copy:
-    src: .bashrc
-    dest: ~/.bashrc
+- name: install packages
+  pacman:
+    name:
+      - alacritty
+      - git
+      - sudo
+
+      # xorg
+      - xorg-server
+      - xorg-xinit
+
+      # interface
+      - i3-gaps
+      - rofi
+      - compton
+      - feh
+
+      # fonts
+      - ttf-dejavu
+      - ttf-roboto
+      - noto-fonts
+      - ttf-liberation
+      - ttf-ubuntu-font-family
+      - ttf-anonymous-pro
+      - ttf-fira-mono
+      - ttf-fira-code
+      - ttf-freefont
+      - adobe-source-code-pro-fonts
+      - otf-font-awesome
+    state: present
