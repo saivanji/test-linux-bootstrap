@@ -12,8 +12,13 @@
     - set_fact: user_pass="{{ user_pass.user_input }}"
       when: initial_load == True
   roles:
+    - { role: base }
     - { role: boot }
-    - { role: network }
-    - { role: time }
+    - { role: fonts }
+    - { role: interface }
     - { role: locale }
+    - { role: network }
+    - { role: terminals }
+    - { role: time }
     - { role: users }
+    - { role: xorg }

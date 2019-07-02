@@ -1,0 +1,11 @@
+---
+- name: alacritty
+  pacman:
+    name:
+      - alacritty
+    state: present
+
+- name: copy alacritty config
+  copy:
+    src: alacritty.yml
+    dest: ~/.config/alacritty/alacritty.yml

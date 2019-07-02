@@ -1,0 +1,22 @@
+---
+- name: packages
+  pacman:
+    name:
+      - xorg-server
+      - xorg-xinit
+    state: present
+
+- name: copy keyboard config file
+  copy:
+    src: 00-keyboard.conf
+    dest: /etc/X11/xorg.conf.d/00-keyboard.conf
+
+- name: copy mouse config file
+  copy:
+    src: 10-mouse.conf
+    dest: /etc/X11/xorg.conf.d/10-mouse.conf
+
+- name: copy .xinitrc
+  copy:
+    src: .xinitrc
+    dest: ~/.xinitrc
