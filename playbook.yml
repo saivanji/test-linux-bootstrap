@@ -21,4 +21,4 @@
     - { role: terminals }
     - { role: time }
     - { role: users }
-    - { role: xorg }
+    - { role: x11 }
