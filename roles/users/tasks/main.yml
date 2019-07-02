@@ -12,8 +12,8 @@
 - name: copy dotfiles
   become_user: "{{ user.name }}"
   synchronize:
-    src: dotfiles
-    dest: "/home/{{ user.name }}"
+    src: dotfiles/
+    dest: "/home/{{ user.name }}/"
 
 - name: copy sudoers
   copy:

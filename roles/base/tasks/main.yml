@@ -13,6 +13,7 @@
 
       # interface
       - i3-gaps
+      - i3status
       - rofi
       - compton
       - feh
