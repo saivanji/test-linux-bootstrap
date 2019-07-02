@@ -17,6 +17,7 @@
     dest: /etc/X11/xorg.conf.d/10-mouse.conf
 
 - name: copy .xinitrc
+  become_user: "{{ user.name }}"
   copy:
     src: .xinitrc
     dest: ~/.xinitrc

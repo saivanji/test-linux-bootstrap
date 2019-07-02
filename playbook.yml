@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  # become: yes
+  become: yes
   pre_tasks:
     - set_fact: initial_load="{{ lookup('env', 'INITIAL_LOAD') }}"
     - pause:

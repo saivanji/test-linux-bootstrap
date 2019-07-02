@@ -9,16 +9,19 @@
     state: present
 
 - name: copy i3 config
+  become_user: "{{ user.name }}"
   copy:
     src: i3
     dest: ~/.config/i3
 
 - name: copy i3status config
+  become_user: "{{ user.name }}"
   copy:
     src: i3status
     dest: ~/.config/i3status
 
 - name: copy wallpaper
+  become_user: "{{ user.name }}"
   copy:
     src: wallpaper.jpg
     dest: ~/Images/wallpaper.jpg
