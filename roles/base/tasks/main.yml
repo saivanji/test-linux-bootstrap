@@ -18,6 +18,13 @@
       - compton
       - feh
 
+      # browsers
+      - chromium
+      - firefox
+
+      # editors
+      - neovim
+
       # fonts
       - ttf-dejavu
       - ttf-roboto
