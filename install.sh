@@ -40,7 +40,7 @@ mount /dev/sda1 /mnt/boot &&
 echo Server = http://mirror.datacenter.by/pub/archlinux/\$repo/os/\$arch > /etc/pacman.d/mirrorlist &&
 
 # install base packages
-pacstrap /mnt base ansible git &&
+pacstrap /mnt base ansible git rsync &&
 
 # generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab &&
@@ -51,7 +51,7 @@ cp -r $(dirname "$0") /mnt/root/bootstrap/ &&
 cat << EOF | arch-chroot /mnt
 
 # run playbook
-ansible-playbook /root/bootstrap/playbook.yml &&
+INITIAL_LOAD=yes ansible-playbook /root/bootstrap/playbook.yml &&
 
 # remove bootstrap
 rm -rf /root/bootstrap &&

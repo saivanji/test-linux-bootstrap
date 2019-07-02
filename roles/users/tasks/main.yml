@@ -1,5 +1,6 @@
 ---
 - name: create a user
+  when: initial_load == True
   user:
     name: "{{ user.name }}"
     groups: wheel
@@ -10,7 +11,7 @@
 
 - name: copy dotfiles
   become_user: "{{ user.name }}"
-  copy:
+  synchronize:
     src: dotfiles
     dest: "/home/{{ user.name }}"
 

@@ -1,6 +1,7 @@
 ---
 - name: install packages
   pacman:
+    update_cache: yes
     name:
       - alacritty
       - git
