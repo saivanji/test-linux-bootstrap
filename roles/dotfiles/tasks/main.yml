@@ -1,0 +1,92 @@
+# Directories
+- name: create ~/Images
+  become_user: "{{ user.name }}"
+  file:
+    path: "/home/{{ user.name }}/Images/"
+    state: directory
+
+- name: create ~/.config
+  become_user: "{{ user.name }}"
+  file:
+    path: "/home/{{ user.name }}/.config/"
+    state: directory
+
+- name: create ~/.config/alacritty
+  become_user: "{{ user.name }}"
+  file:
+    path: "/home/{{ user.name }}/.config/alacritty/"
+    state: directory
+
+- name: create ~/.config/i3status
+  become_user: "{{ user.name }}"
+  file:
+    path: "/home/{{ user.name }}/.config/i3status/"
+    state: directory
+
+- name: create ~/.config/nvim
+  become_user: "{{ user.name }}"
+  file:
+    path: "/home/{{ user.name }}/.config/nvim/"
+    state: directory
+
+- name: create ~/.config/i3
+  become_user: "{{ user.name }}"
+  file:
+    path: "/home/{{ user.name }}/.config/i3/"
+    state: directory
+
+
+# Files
+- name: copy .xinitrc
+  become_user: "{{ user.name }}"
+  file:
+    src: .xinitrc
+    dest: "/home/{{ user.name }}/.xinitrc"
+
+- name: copy .config/alacritty/alacritty.yml
+  become_user: "{{ user.name }}"
+  file:
+    src: .config/alacritty/alacritty.yml
+    dest: "/home/{{ user.name }}/.config/alacritty/alacritty.yml"
+
+- name: copy .config/i3status/config
+  become_user: "{{ user.name }}"
+  file:
+    src: .config/i3status/config
+    dest: "/home/{{ user.name }}/.config/i3status/config"
+
+- name: copy .config/nvim/init.vim
+  become_user: "{{ user.name }}"
+  file:
+    src: .config/nvim/init.vim
+    dest: "/home/{{ user.name }}/.config/nvim/init.vim"
+
+- name: copy wallpaper
+  become_user: "{{ user.name }}"
+  file:
+    src: Images/wallpaper.jpg
+    dest: "/home/{{ user.name }}/Images/wallpaper.jpg"
+
+- name: copy .Xresources
+  become_user: "{{ user.name }}"
+  template:
+    src: .Xresources.j2
+    dest: "/home/{{ user.name }}/.Xresources"
+
+- name: copy .bashrc
+  become_user: "{{ user.name }}"
+  template:
+    src: .bashrc.j2
+    dest: "/home/{{ user.name }}/.bashrc"
+
+- name: copy chromium-flags.conf
+  become_user: "{{ user.name }}"
+  template:
+    src: .config/chromium-flags.conf.j2
+    dest: "/home/{{ user.name }}/.config/chromium-flags.conf"
+
+- name: copy i3 config
+  become_user: "{{ user.name }}"
+  template:
+    src: .config/i3/config.j2
+    dest: "/home/{{ user.name }}/.config/i3/config"

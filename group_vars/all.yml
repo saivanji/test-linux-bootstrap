@@ -1,2 +1,14 @@
 user:
   name: some_name
+
+# screen:
+#   dpi: 120
+#   scale: 1.25
+
+screen:
+  dpi: 128
+  scale: 1.33333333
+
+# screen:
+#   dpi: 144
+#   scale: 1.5
