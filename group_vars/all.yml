@@ -1,13 +1,21 @@
 user:
   name: some_name
 
-# screen:
-#   dpi: 120
-#   scale: 1.25
-
 screen:
   dpi: 128
   scale: 1.33333333
+
+font:
+  monospace:
+    family: Source Code Pro
+    size: 11
+  sans:
+    family: Cantarell
+    size: 11
+
+# screen:
+#   dpi: 120
+#   scale: 1.25
 
 # screen:
 #   dpi: 144

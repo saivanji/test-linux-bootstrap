@@ -11,5 +11,17 @@
 
 # Not critical
 
-- Use xrdb -merge ~/.Xresources before startup
 - Put Xft.dpi to system file
+- bash PS1 should indicate whether user logged as root.
+- neovim paste doesn't work
+- define font in vars
+- use terminus pro in tty? as default font doesn't renders some symbols
+
+# Tasks
+
+- Use xrdb -merge ~/.Xresources before startup
+- neovim plugins install
+  - install fzf and the rest deps
+- screen locker
+- setup gtk theme
+- jailing

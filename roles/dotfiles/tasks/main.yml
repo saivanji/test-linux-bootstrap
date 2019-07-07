@@ -39,31 +39,25 @@
 # Files
 - name: copy .xinitrc
   become_user: "{{ user.name }}"
-  file:
+  copy:
     src: .xinitrc
     dest: "/home/{{ user.name }}/.xinitrc"
 
-- name: copy .config/alacritty/alacritty.yml
-  become_user: "{{ user.name }}"
-  file:
-    src: .config/alacritty/alacritty.yml
-    dest: "/home/{{ user.name }}/.config/alacritty/alacritty.yml"
-
 - name: copy .config/i3status/config
   become_user: "{{ user.name }}"
-  file:
+  copy:
     src: .config/i3status/config
     dest: "/home/{{ user.name }}/.config/i3status/config"
 
 - name: copy .config/nvim/init.vim
   become_user: "{{ user.name }}"
-  file:
+  copy:
     src: .config/nvim/init.vim
     dest: "/home/{{ user.name }}/.config/nvim/init.vim"
 
 - name: copy wallpaper
   become_user: "{{ user.name }}"
-  file:
+  copy:
     src: Images/wallpaper.jpg
     dest: "/home/{{ user.name }}/Images/wallpaper.jpg"
 
@@ -90,3 +84,9 @@
   template:
     src: .config/i3/config.j2
     dest: "/home/{{ user.name }}/.config/i3/config"
+
+- name: copy .config/alacritty/alacritty.yml
+  become_user: "{{ user.name }}"
+  template:
+    src: .config/alacritty/alacritty.yml.j2
+    dest: "/home/{{ user.name }}/.config/alacritty/alacritty.yml"
