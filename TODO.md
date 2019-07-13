@@ -16,12 +16,18 @@
 - neovim paste doesn't work
 - define font in vars
 - use terminus pro in tty? as default font doesn't renders some symbols
+- Notion debt page in mozilla start page
 
 # Tasks
 
-- Use xrdb -merge ~/.Xresources before startup
 - neovim plugins install
   - install fzf and the rest deps
-- screen locker
+- screen locker, slock
 - setup gtk theme
 - jailing
+- .inputrc
+- copy video specific settings to /etc/X11/xorg.conf.d
+- bluetooth
+- bt, wifi indicators on panel
+- use i3 blocks
+- wifi-menu

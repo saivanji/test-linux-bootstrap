@@ -37,4 +37,8 @@
       - ttf-freefont
       - adobe-source-code-pro-fonts
       - otf-font-awesome
+
+      # utils
+      - fzf
+      - ack
     state: present
