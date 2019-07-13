@@ -41,4 +41,5 @@
       # utils
       - fzf
       - ack
+      - bash-completion
     state: present
