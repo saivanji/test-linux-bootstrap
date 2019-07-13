@@ -21,10 +21,9 @@
 # Tasks
 
 - screen locker, slock
-- setup gtk theme
+- use i3 blocks
 - jailing
 - copy video specific settings to /etc/X11/xorg.conf.d
 - bluetooth
 - bt, wifi indicators on panel
-- use i3 blocks
 - wifi-menu
