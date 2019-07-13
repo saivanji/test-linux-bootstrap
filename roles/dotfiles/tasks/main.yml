@@ -61,6 +61,12 @@
     src: Images/wallpaper.jpg
     dest: "/home/{{ user.name }}/Images/wallpaper.jpg"
 
+- name: copy .inputrc
+  become_user: "{{ user.name }}"
+  copy:
+    src: .inputrc
+    dest: "/home/{{ user.name }}/.inputrc"
+
 - name: copy .Xresources
   become_user: "{{ user.name }}"
   template:

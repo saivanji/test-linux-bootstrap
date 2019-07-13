@@ -20,12 +20,9 @@
 
 # Tasks
 
-- neovim plugins install
-  - install fzf and the rest deps
 - screen locker, slock
 - setup gtk theme
 - jailing
-- .inputrc
 - copy video specific settings to /etc/X11/xorg.conf.d
 - bluetooth
 - bt, wifi indicators on panel
