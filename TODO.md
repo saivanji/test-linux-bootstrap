@@ -24,18 +24,8 @@
 # Tasks
 
 - auto copying dotfiles
-
-- use i3 blocks
-
-  - # date
-  - # battery
-  - wifi / lte indicator
-  - bluetooth indicator
-  - # keyboard layout
-  - weather
-  - volume
-
 - jailing
+- ssh
 
   - restrict access to /usr/bin ? in order to disallow accessing spawning new node process and accessing home dir? most likely spawned process will not have access to home anyways
   - have node but not yarn installed, share node_modules between container and host machine to have access to packages such as prettier etc

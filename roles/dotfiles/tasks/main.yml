@@ -84,12 +84,14 @@
   copy:
     src: .config/i3blocks/scripts/battery
     dest: "/home/{{ user.name }}/.config/i3blocks/scripts/battery"
+    mode: '0755'
 
 - name: copy .config/i3blocks/scripts/keyboard
   become_user: "{{ user.name }}"
   copy:
     src: .config/i3blocks/scripts/keyboard
     dest: "/home/{{ user.name }}/.config/i3blocks/scripts/keyboard"
+    mode: '0755'
 
 - name: copy .config/nvim/init.vim
   become_user: "{{ user.name }}"
