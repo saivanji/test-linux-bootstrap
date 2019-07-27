@@ -14,6 +14,7 @@
       # interface
       - i3-gaps
       - i3status
+      - i3blocks
       - rofi
       - compton
       - feh
@@ -42,4 +43,7 @@
       - fzf
       - ack
       - bash-completion
+      - sysstat
+      - acpi
+      - alsa-utils
     state: present

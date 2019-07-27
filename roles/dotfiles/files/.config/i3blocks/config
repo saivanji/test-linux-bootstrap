@@ -1,0 +1,15 @@
+command=$SCRIPTS_DIR/$BLOCK_NAME
+interval=30
+markup=pango
+
+[keyboard]
+label=<span size="small"></span>
+signal=3
+
+[battery]
+signal=2
+
+[time]
+command=date '+%m/%d %H:%M'
+label=<span size="small"></span>
+signal=1

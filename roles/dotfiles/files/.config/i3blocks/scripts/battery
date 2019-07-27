@@ -1,0 +1,44 @@
+#!/bin/bash
+battery_num="${BLOCK_INSTANCE:-0}"
+output=$(acpi -b | grep "Battery $battery_num")
+percentage=$(echo $output | grep -o -m1 '[0-9]\{1,3\}%' | tr -d '%')
+is_charging=$(echo $output | grep -o -m1 'Charging')
+
+charging_icon="\uf1e6"
+empty_icon="\uf244"
+quarter_icon="\uf243"
+half_icon="\uf242"
+three_quarters_icon="\uf241"
+full_icon="\uf240"
+
+# Exiting if there is no output from acpi
+if [ -z $output]
+then
+  exit 0
+fi
+
+# Defining appropriate icon
+if (($percentage == 0))
+then
+  icon=$empty_icon
+elif (($percentage <= 25))
+then
+  icon=$quarter_icon
+elif (($percentage <= 50))
+then
+  icon=$half_icon
+elif (($percentage <= 75))
+then
+  icon=$three_quarters_icon
+else
+  icon=$full_icon
+fi
+
+if [ $is_charging ]
+then
+  icon=$charging_icon
+fi
+
+echo -e "<span size='small'>$icon</span> $percentage%"
+echo -e "<span size='small'>$icon</span>"
+

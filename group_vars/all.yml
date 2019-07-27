@@ -5,6 +5,8 @@ screen:
   dpi: 128
   scale: 1.33333333
 
+video: intel
+
 font:
   monospace:
     family: Source Code Pro
