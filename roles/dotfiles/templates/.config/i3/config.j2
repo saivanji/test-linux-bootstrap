@@ -157,3 +157,10 @@ bar {
 }
 
 for_window [class="^.*"] border pixel 0
+
+set $black #000000
+set $white #ffffff
+set $gray #888888
+
+client.unfocused $black $black $gray
+client.focused $black $black $white
