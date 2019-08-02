@@ -9,6 +9,10 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+set $black #000000
+set $white #ffffff
+set $gray #888888
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -154,13 +158,13 @@ bar {
   separator_symbol " :|: "
   position top
   status_command SCRIPTS_DIR=~/.config/i3blocks/scripts i3blocks
+  colors {
+    focused_workspace $black $black $white
+    inactive_workspace $black $black $gray
+  }
 }
 
 for_window [class="^.*"] border pixel 0
-
-set $black #000000
-set $white #ffffff
-set $gray #888888
 
 client.unfocused $black $black $gray
 client.focused $black $black $white
