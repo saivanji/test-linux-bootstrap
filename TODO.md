@@ -33,3 +33,8 @@
   -enable slock?
 
 - how to avoid dns reconfiguring attack
+
+
+Neovim
+- Snippets (deoplete, neosnippet)
+- jailing
