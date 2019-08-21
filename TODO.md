@@ -5,7 +5,7 @@
 - define font in vars
 - use terminus pro in tty? as default font doesn't renders some symbols
 - Notion debt page in mozilla start page
-- use monospace font as in github or - https://github.com/vivien/i3blocks-contrib/blob/master/batterybar/screenshot.png . Liberation Mono or simply 'monospace', Roboto Mono(from iceberg)
+- use monospace font as in github or - https://github.com/vivien/i3blocks-contrib/blob/master/batterybar/screenshot.png . Liberation Mono or simply 'monospace', Roboto Mono(from iceberg), Noto Mono
 - define system color set
 - have terminal colors the same as in current ubuntu
 - make terminal and generic black color deeply darkened blue
@@ -33,3 +33,8 @@
   -enable slock?
 
 - how to avoid dns reconfiguring attack
+
+Neovim
+
+- Snippets (deoplete, neosnippet)
+- jailing
