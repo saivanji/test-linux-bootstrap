@@ -1,1 +1,1 @@
-Being on the loaded arch installation system, clone this repository. Then, run `./install.sh`. After it finishes successfully, run `passwd` and `passwd <username>` to set passwords.
+Being on the loaded arch installation system, clone this repository. Then, run `./install.sh`. After it finishes successfully, chroot into the installed system and run `passwd` and `passwd <username>` to set passwords.
