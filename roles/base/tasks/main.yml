@@ -47,4 +47,9 @@
       - acpi
       - alsa-utils
       - dhcpcd
+
+      # dev
+      - nodejs
+      - npm
+      - yarn
     state: present
