@@ -51,12 +51,9 @@ cp -r $(dirname "$0") /mnt/root/bootstrap/ &&
 cat << EOF | arch-chroot /mnt
 
 # run playbook
-INITIAL_LOAD=yes ansible-playbook /root/bootstrap/playbook.yml &&
+ansible-playbook /root/bootstrap/playbook.yml &&
 
 # remove bootstrap
 rm -rf /root/bootstrap &&
-
-# set root password
-passwd
 
 EOF
