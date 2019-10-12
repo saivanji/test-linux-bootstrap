@@ -6,6 +6,7 @@
     - { role: base }
     - { role: boot }
     - { role: dotfiles }
+    - { role: editors }
     - { role: locale }
     - { role: network }
     - { role: time }
