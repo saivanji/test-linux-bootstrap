@@ -40,7 +40,7 @@ mount /dev/sda1 /mnt/boot &&
 echo Server = http://mirror.datacenter.by/pub/archlinux/\$repo/os/\$arch > /etc/pacman.d/mirrorlist &&
 
 # install base packages
-pacstrap /mnt base ansible git rsync &&
+pacstrap /mnt base linux linux-firmware ansible git rsync &&
 
 # generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab &&
