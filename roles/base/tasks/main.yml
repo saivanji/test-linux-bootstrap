@@ -46,4 +46,5 @@
       - sysstat
       - acpi
       - alsa-utils
+      - dhcpcd
     state: present
