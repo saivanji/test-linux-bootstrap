@@ -9,7 +9,7 @@
 - name: jail node
   file:
     src: /usr/bin/firejail
-    dest: /usr/bin/node
+    dest: /usr/local/bin/node
     state: link
 
 # NPM
@@ -22,7 +22,7 @@
 - name: jail npm
   file:
     src: /usr/bin/firejail
-    dest: /usr/bin/npm
+    dest: /usr/local/bin/npm
     state: link
 
 # Yarn
@@ -35,5 +35,5 @@
 - name: jail yarn
   file:
     src: /usr/bin/firejail
-    dest: /usr/bin/yarn
+    dest: /usr/local/bin/yarn
     state: link
