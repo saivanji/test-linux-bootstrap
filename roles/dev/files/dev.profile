@@ -1,5 +1,6 @@
 include /etc/firejail/default.profile
 
-private
+#private
 
 whitelist ${HOME}/Projects
+whitelist ${HOME}/.local/share/nvim/plugged
