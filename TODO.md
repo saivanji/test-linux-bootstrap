@@ -38,3 +38,8 @@ Neovim
 
 - Snippets (deoplete, neosnippet)
 - jailing
+
+---
+
+- Create 2 dirs for yarn bin
+- Install prettier and eslint
