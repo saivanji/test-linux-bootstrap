@@ -166,3 +166,9 @@ let g:user_emmet_settings = {
 \      'quote_char': "'",
 \  },
 \}
+
+" Prettier
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+let g:prettier#exec_cmd_async = 1
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
