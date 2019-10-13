@@ -4,7 +4,7 @@
   become_user: "{{ user.name }}"
   copy:
     src: dev.profile
-    dest: "/home/{{ user.name }}/firejail/node.profile"
+    dest: "/home/{{ user.name }}/.config/firejail/node.profile"
 
 - name: jail node
   file:
@@ -17,7 +17,7 @@
   become_user: "{{ user.name }}"
   copy:
     src: dev.profile
-    dest: "/home/{{ user.name }}/firejail/npm.profile"
+    dest: "/home/{{ user.name }}/.config/firejail/npm.profile"
 
 - name: jail npm
   file:
@@ -30,7 +30,7 @@
   become_user: "{{ user.name }}"
   copy:
     src: dev.profile
-    dest: "/home/{{ user.name }}/firejail/yarn.profile"
+    dest: "/home/{{ user.name }}/.config/firejail/yarn.profile"
 
 - name: jail yarn
   file:
