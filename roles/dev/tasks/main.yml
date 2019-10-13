@@ -1,2 +1,39 @@
 ---
+# Node
+- name: copy node firejail profile
+  become_user: "{{ user.name }}"
+  copy:
+    src: dev.profile
+    dest: "/home/{{ user.name }}/firejail/node.profile"
+
 - name: jail node
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/bin/node
+    state: link
+
+# NPM
+- name: copy npm firejail profile
+  become_user: "{{ user.name }}"
+  copy:
+    src: dev.profile
+    dest: "/home/{{ user.name }}/firejail/npm.profile"
+
+- name: jail npm
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/bin/npm
+    state: link
+
+# Yarn
+- name: copy yarn firejail profile
+  become_user: "{{ user.name }}"
+  copy:
+    src: dev.profile
+    dest: "/home/{{ user.name }}/firejail/yarn.profile"
+
+- name: jail yarn
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/bin/yarn
+    state: link

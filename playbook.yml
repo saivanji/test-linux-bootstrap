@@ -6,7 +6,9 @@
     - { role: base }
     - { role: boot }
     - { role: dotfiles }
+    - { role: dev }
     - { role: editors }
+    - { role: firejail }
     - { role: locale }
     - { role: network }
     - { role: time }
