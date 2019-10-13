@@ -10,6 +10,9 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'nanotech/jellybeans.vim'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'justinmk/vim-dirvish'
 Plug 'dyng/ctrlsf.vim', { 'on': 'CtrlSF' }
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers'] }
