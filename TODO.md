@@ -41,5 +41,4 @@ Neovim
 
 ---
 
-- Create 2 dirs for yarn bin
 - Install prettier and eslint
