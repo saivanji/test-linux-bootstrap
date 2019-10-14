@@ -39,11 +39,13 @@
     state: link
 
 - name: create .yarn/bin
+  become_user: "{{ user.name }}"
   file:
     path: "/home/{{ user.name }}/.yarn/bin"
     state: directory
 
 - name: create .config/yarn
+  become_user: "{{ user.name }}"
   file:
     path: "/home/{{ user.name }}/.config/yarn"
     state: directory
