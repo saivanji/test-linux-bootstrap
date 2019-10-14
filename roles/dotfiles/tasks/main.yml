@@ -134,3 +134,9 @@
   template:
     src: .config/alacritty/alacritty.yml.j2
     dest: "/home/{{ user.name }}/.config/alacritty/alacritty.yml"
+
+- name: copy .eslintrc.js
+  become_user: "{{ user.name }}"
+  template:
+    src: .eslintrc.js
+    dest: "/home/{{ user.name }}/.eslintrc.js"
