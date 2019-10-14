@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'dense-analysis/ale'
 Plug 'nanotech/jellybeans.vim'
 Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
@@ -171,3 +172,9 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+" Ale
+let g:ale_sign_error = '››'
+
+" Go to definition
+nnoremap <C-i> :ALEGoToDefinition<CR>
