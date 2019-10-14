@@ -54,3 +54,9 @@
   become_user: "{{ user.name }}"
   args:
     creates: "/home/{{ user.name }}/.yarn/bin/prettier"
+
+- name: install eslint
+  command: yarn global add eslint
+  become_user: "{{ user.name }}"
+  args:
+    creates: "/home/{{ user.name }}/.yarn/bin/eslint"
