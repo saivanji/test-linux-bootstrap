@@ -11,22 +11,21 @@
 - make terminal and generic black color deeply darkened blue
 - make terminal color palette
 - Add \$VISUAL to .bashrc?
+- auto copying dotfiles
+- how to avoid dns reconfiguring attack
+
+Neovim
+
+- Snippets (deoplete, neosnippet)
 
 # Tasks
-
-- auto copying dotfiles
-- ssh
 
 - copy video specific settings to /etc/X11/xorg.conf.d
 
   - should I copy all video drivers configuration and system will choose automatically which one to use for gpu?
   - OutputClass all drivers and Device in template for defining driver in use
 
+- ssh
+
 - slock. suspend on lid close
   -enable slock?
-
-- how to avoid dns reconfiguring attack
-
-Neovim
-
-- Snippets (deoplete, neosnippet)
