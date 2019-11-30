@@ -1,10 +1,4 @@
 ---
-- name: install firejail
-  pacman:
-    update_cache: yes
-    name:
-      - firejail
-
 - name: create config dir
   become_user: "{{ user.name }}"
   file:
