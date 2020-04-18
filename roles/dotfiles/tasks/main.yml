@@ -63,14 +63,14 @@
 
 - name: copy .gtkrc-2.0
   become_user: "{{ user.name }}"
-  copy:
-    src: .gtkrc-2.0
+  template:
+    src: .gtkrc-2.0.j2
     dest: "/home/{{ user.name }}/.gtkrc-2.0"
 
 - name: copy gtk-3 settings.ini
   become_user: "{{ user.name }}"
-  copy:
-    src: .config/gtk-3.0/settings.ini
+  template:
+    src: .config/gtk-3.0/settings.ini.j2
     dest: "/home/{{ user.name }}/.config/gtk-3.0/settings.ini"
 
 - name: copy .config/nvim/init.vim

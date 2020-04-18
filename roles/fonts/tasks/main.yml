@@ -1,0 +1,7 @@
+---
+- name: Copy fonts
+  copy:
+    src: "{{ item }}"
+    dest: "/usr/share/fonts/paratype/"
+  with_fileglob:
+    - "files/*"

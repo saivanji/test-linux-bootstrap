@@ -1,6 +1,12 @@
 user:
   name: some_name
 
+users:
+  personal:
+    name: personal
+  work:
+    name: work
+
 screen:
   dpi: 128
   scale: 1.33333333
@@ -8,12 +14,12 @@ screen:
 video: intel
 
 font:
-  monospace:
-    family: Source Code Pro
-    size: 11
   sans:
-    family: Cantarell
-    size: 11
+    family: PT Sans
+    size: 10
+  monospace:
+    family: PT Mono
+    size: 9
 
 # screen:
 #   dpi: 120
