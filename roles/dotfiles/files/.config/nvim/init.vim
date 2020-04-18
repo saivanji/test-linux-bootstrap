@@ -34,7 +34,7 @@ set termguicolors
 
 " Color scheme
 set background=dark
-colorscheme oceanic
+colorscheme oceanics
 
 " Invisible characters
 set listchars=eol:¬,space:·,tab:--,trail:·,extends:>,precedes:<

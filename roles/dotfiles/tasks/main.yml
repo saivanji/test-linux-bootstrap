@@ -38,7 +38,13 @@
 - name: create ~/.config/nvim
   become_user: "{{ user.name }}"
   file:
-    path: "/home/{{ user.name }}/.config/nvim/"
+    path: "/home/{{ user.name }}/.config/nvim"
+    state: directory
+
+- name: create ~/.config/nvim/colors
+  become_user: "{{ user.name }}"
+  file:
+    path: "/home/{{ user.name }}/.config/nvim/colors"
     state: directory
 
 - name: create ~/.config/i3
@@ -98,6 +104,12 @@
   copy:
     src: .config/nvim/init.vim
     dest: "/home/{{ user.name }}/.config/nvim/init.vim"
+
+- name: copy .config/nvim/colors/oceanics.vim
+  become_user: "{{ user.name }}"
+  copy:
+    src: .config/nvim/colors/oceanics.vim
+    dest: "/home/{{ user.name }}/.config/nvim/colors/oceanics.vim"
 
 - name: copy wallpaper
   become_user: "{{ user.name }}"
