@@ -13,6 +13,7 @@
 
       # interface
       - bspwm
+      - picom
       - rofi
       - feh
 
@@ -52,4 +53,25 @@
 
       # other
       - firejail
+      - vifm
     state: present
+
+
+- name: jail node
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/node
+    state: link
+
+- name: jail npm
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/npm
+    state: link
+
+- name: jail yarn
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/yarn
+    state: link
+

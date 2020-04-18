@@ -1,0 +1,19 @@
+- name: create directory for global node_modules
+  become_user: "{{ user.name }}"
+  file:
+    path: "/home/{{ user.name }}/.node_global"
+    state: directory
+
+- name: install prettier
+  command: yarn add prettier
+  chdir: "/home/{{ user.name }}/.node_global"
+  become_user: "{{ user.name }}"
+  args:
+    creates: "/home/{{ user.name }}/.node_global/node_modules/bin/prettier"
+
+- name: install eslint
+  command: yarn add eslint
+  chdir: "/home/{{ user.name }}/.node_global"
+  become_user: "{{ user.name }}"
+  args:
+    creates: "/home/{{ user.name }}/.node_global/node_modules/bin/eslint"

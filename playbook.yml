@@ -5,10 +5,8 @@
   roles:
     - { role: base }
     - { role: boot }
+    - { role: development }
     - { role: dotfiles }
-    - { role: dev }
-    - { role: editors }
-    - { role: firejail }
     - { role: fonts }
     - { role: locale }
     - { role: network }

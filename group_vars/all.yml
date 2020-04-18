@@ -4,14 +4,17 @@ user:
 users:
   personal:
     name: personal
+    sudo: true
   work:
     name: work
+    sudo: false
 
 screen:
   dpi: 128
   scale: 1.33333333
 
 video: intel
+# video: amd
 
 font:
   sans:

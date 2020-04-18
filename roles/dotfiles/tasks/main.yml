@@ -1,135 +1,48 @@
-# Directories
-- name: create ~/Images
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/Images/"
-    state: directory
-
-- name: create ~/.config
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/.config/"
-    state: directory
-
-- name: create ~/.config/alacritty
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/.config/alacritty/"
-    state: directory
-
-- name: create ~/.config/gtk-3.0
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/.config/gtk-3.0/"
-    state: directory
-
-- name: create ~/.config/nvim
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/.config/nvim"
-    state: directory
-
-- name: create ~/.config/nvim/colors
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/.config/nvim/colors"
-    state: directory
-
-- name: create ~/.config/bspwm
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/.config/bspwm"
-    state: directory
-
-- name: create ~/.config/sxhkd
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/.config/sxhkd"
-    state: directory
-
-
-# Files
-- name: copy .xinitrc
+- name: copy dotfiles
   become_user: "{{ user.name }}"
   copy:
-    src: .xinitrc
-    dest: "/home/{{ user.name }}/.xinitrc"
+    src: files/
+    dest: "/home/{{ user.name }}/"
 
-- name: copy .inputrc
-  become_user: "{{ user.name }}"
-  copy:
-    src: .inputrc
-    dest: "/home/{{ user.name }}/.inputrc"
-
-- name: copy .gtkrc-2.0
+- name: .gtkrc-2.0
   become_user: "{{ user.name }}"
   template:
     src: .gtkrc-2.0.j2
     dest: "/home/{{ user.name }}/.gtkrc-2.0"
 
-- name: copy gtk-3 settings.ini
+- name: gtk-3 settings.ini
   become_user: "{{ user.name }}"
   template:
-    src: .config/gtk-3.0/settings.ini.j2
+    src: settings.ini.j2
     dest: "/home/{{ user.name }}/.config/gtk-3.0/settings.ini"
 
-- name: copy .config/nvim/init.vim
-  become_user: "{{ user.name }}"
-  copy:
-    src: .config/nvim/init.vim
-    dest: "/home/{{ user.name }}/.config/nvim/init.vim"
-
-- name: copy .config/nvim/colors/oceanics.vim
-  become_user: "{{ user.name }}"
-  copy:
-    src: .config/nvim/colors/oceanics.vim
-    dest: "/home/{{ user.name }}/.config/nvim/colors/oceanics.vim"
-
-- name: copy wallpaper
-  become_user: "{{ user.name }}"
-  copy:
-    src: Images/wallpaper.jpg
-    dest: "/home/{{ user.name }}/Images/wallpaper.jpg"
-
-- name: copy .Xresources
+- name: .Xresources
   become_user: "{{ user.name }}"
   template:
     src: .Xresources.j2
     dest: "/home/{{ user.name }}/.Xresources"
 
-- name: copy .bashrc
+- name: chromium-flags.conf
   become_user: "{{ user.name }}"
   template:
-    src: .bashrc.j2
-    dest: "/home/{{ user.name }}/.bashrc"
-
-- name: copy chromium-flags.conf
-  become_user: "{{ user.name }}"
-  template:
-    src: .config/chromium-flags.conf.j2
+    src: chromium-flags.conf.j2
     dest: "/home/{{ user.name }}/.config/chromium-flags.conf"
 
-- name: copy .config/alacritty/alacritty.yml
+- name: alacritty.yml
   become_user: "{{ user.name }}"
   template:
-    src: .config/alacritty/alacritty.yml.j2
+    src: alacritty.yml.j2
     dest: "/home/{{ user.name }}/.config/alacritty/alacritty.yml"
 
-- name: copy .eslintrc.js
+- name: create vim plug directory
   become_user: "{{ user.name }}"
-  copy:
-    src: .eslintrc.js
-    dest: "/home/{{ user.name }}/.eslintrc.js"
+  file:
+    path: "/home/{{ user.name }}/.local/share/nvim/site/autoload"
+    state: directory
 
-- name: copy .config/bspwm/bspwmrc
+- name: download vim plug
   become_user: "{{ user.name }}"
-  copy:
-    src: .config/bspwm/bspwmrc
-    dest: "/home/{{ user.name }}/.config/bspwm/bspwmrc"
-
-- name: copy .config/sxhkd/sxhkdrc
-  become_user: "{{ user.name }}"
-  copy:
-    src: .config/sxhkd/sxhkdrc
-    dest: "/home/{{ user.name }}/.config/sxhkd/sxhkdrc"
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: "/home/{{ user.name }}/.local/share/nvim/site/autoload/plug.vim"
 
