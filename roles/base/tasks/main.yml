@@ -12,6 +12,7 @@
       - xorg-xinit
 
       # interface
+      - bspwm
       - rofi
       - feh
 

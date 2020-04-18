@@ -35,6 +35,18 @@
     path: "/home/{{ user.name }}/.config/nvim/colors"
     state: directory
 
+- name: create ~/.config/bspwm
+  become_user: "{{ user.name }}"
+  file:
+    path: "/home/{{ user.name }}/.config/bspwm"
+    state: directory
+
+- name: create ~/.config/sxhkd
+  become_user: "{{ user.name }}"
+  file:
+    path: "/home/{{ user.name }}/.config/sxhkd"
+    state: directory
+
 
 # Files
 - name: copy .xinitrc
@@ -108,3 +120,16 @@
   copy:
     src: .eslintrc.js
     dest: "/home/{{ user.name }}/.eslintrc.js"
+
+- name: copy .config/bspwm/bspwmrc
+  become_user: "{{ user.name }}"
+  copy:
+    src: .config/bspwm/bspwmrc
+    dest: "/home/{{ user.name }}/.config/bspwm/bspwmrc"
+
+- name: copy .config/sxhkd/sxhkdrc
+  become_user: "{{ user.name }}"
+  copy:
+    src: .config/sxhkd/sxhkdrc
+    dest: "/home/{{ user.name }}/.config/sxhkd/sxhkdrc
+
