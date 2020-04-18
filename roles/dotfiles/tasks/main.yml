@@ -23,18 +23,6 @@
     path: "/home/{{ user.name }}/.config/gtk-3.0/"
     state: directory
 
-- name: create ~/.config/i3blocks
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/.config/i3blocks/"
-    state: directory
-
-- name: create ~/.config/i3blocks/scripts
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/.config/i3blocks/scripts"
-    state: directory
-
 - name: create ~/.config/nvim
   become_user: "{{ user.name }}"
   file:
@@ -45,12 +33,6 @@
   become_user: "{{ user.name }}"
   file:
     path: "/home/{{ user.name }}/.config/nvim/colors"
-    state: directory
-
-- name: create ~/.config/i3
-  become_user: "{{ user.name }}"
-  file:
-    path: "/home/{{ user.name }}/.config/i3/"
     state: directory
 
 
@@ -78,26 +60,6 @@
   copy:
     src: .config/gtk-3.0/settings.ini
     dest: "/home/{{ user.name }}/.config/gtk-3.0/settings.ini"
-
-- name: copy .config/i3blocks/config
-  become_user: "{{ user.name }}"
-  copy:
-    src: .config/i3blocks/config
-    dest: "/home/{{ user.name }}/.config/i3blocks/config"
-
-- name: copy .config/i3blocks/scripts/battery
-  become_user: "{{ user.name }}"
-  copy:
-    src: .config/i3blocks/scripts/battery
-    dest: "/home/{{ user.name }}/.config/i3blocks/scripts/battery"
-    mode: '0755'
-
-- name: copy .config/i3blocks/scripts/keyboard
-  become_user: "{{ user.name }}"
-  copy:
-    src: .config/i3blocks/scripts/keyboard
-    dest: "/home/{{ user.name }}/.config/i3blocks/scripts/keyboard"
-    mode: '0755'
 
 - name: copy .config/nvim/init.vim
   become_user: "{{ user.name }}"
@@ -134,12 +96,6 @@
   template:
     src: .config/chromium-flags.conf.j2
     dest: "/home/{{ user.name }}/.config/chromium-flags.conf"
-
-- name: copy i3 config
-  become_user: "{{ user.name }}"
-  template:
-    src: .config/i3/config.j2
-    dest: "/home/{{ user.name }}/.config/i3/config"
 
 - name: copy .config/alacritty/alacritty.yml
   become_user: "{{ user.name }}"

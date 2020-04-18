@@ -12,11 +12,7 @@
       - xorg-xinit
 
       # interface
-      - i3-gaps
-      - i3status
-      - i3blocks
       - rofi
-      - compton
       - feh
 
       # browsers
