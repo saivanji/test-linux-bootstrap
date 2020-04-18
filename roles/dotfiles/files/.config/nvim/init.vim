@@ -10,7 +10,6 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
-Plug 'nanotech/jellybeans.vim'
 Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'justinmk/vim-dirvish'
@@ -33,33 +32,9 @@ set noswapfile
 set termguicolors
 "set colorcolumn=78
 
-let g:jellybeans_overrides = {
-\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
-\}
-if has('termguicolors') && &termguicolors
-    let g:jellybeans_overrides['background']['guibg'] = 'none'
-endif
-
 " Color scheme
-"set background=dark
-colorscheme jellybeans
-
-"hi Normal guibg=none guifg='#CDD3DE'
-"hi LineNr guibg=bg
-"hi CursorLineNr guibg=bg guifg='#FAC863'
-"hi VertSplit guibg='#65737E' guifg='#000000'
-"hi EndOfBuffer guibg=bg guifg='#65737e'
-"hi CursorLine guibg='#1b2b34'
-"hi Directory guifg='#fac863'
-hi StatusLine guibg=none guifg=fg gui=none
-" hi StatusLineNC guibg=fg guifg='#091013'
-"hi Whitespace guifg='#343D46'
-"hi NonText guifg='#343D46'
-"hi SignColumn guibg='#0e171c'
-"hi ALEErrorSign guibg='#0e171c'
-"hi ALEWarningSign guibg='#0e171c'
-"hi MatchParen gui=underline guibg=none
-"hi ColorColumn guibg='#0e171c'
+set background=dark
+colorscheme oceanic
 
 " Invisible characters
 set listchars=eol:¬,space:·,tab:--,trail:·,extends:>,precedes:<
