@@ -137,6 +137,6 @@
 
 - name: copy .eslintrc.js
   become_user: "{{ user.name }}"
-  template:
+  copy:
     src: .eslintrc.js
     dest: "/home/{{ user.name }}/.eslintrc.js"
