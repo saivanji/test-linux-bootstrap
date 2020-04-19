@@ -1,0 +1,5 @@
+colorscheme Oceanics
+
+only
+
+filetype * nvim

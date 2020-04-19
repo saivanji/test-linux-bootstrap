@@ -2,16 +2,12 @@
 
 - Put Xft.dpi to system file
 - bash PS1 should indicate whether user logged as root.
-- define font in vars
 - use terminus pro in tty? as default font doesn't renders some symbols
-- Notion debt page in mozilla start page
 - use monospace font as in github or - https://github.com/vivien/i3blocks-contrib/blob/master/batterybar/screenshot.png . Liberation Mono or simply 'monospace', Roboto Mono(from iceberg), Noto Mono
 - define system color set
 - have terminal colors the same as in current ubuntu
 - make terminal and generic black color deeply darkened blue
 - make terminal color palette
-- Add \$VISUAL to .bashrc?
-- auto copying dotfiles
 - how to avoid dns reconfiguring attack
 
 Neovim
@@ -29,3 +25,14 @@ Neovim
 
 - slock. suspend on lid close
   -enable slock?
+
+- make sure jailing works
+- setup env based install
+  - install xorg drivers depending on selected card?
+- check role dependencies
+- vifm colors
+- check ansible bootstrap for the multiple users
+  - or apply only dotfiles and other user specific roles
+- add /usr/local/bin path to global bashrc
+
+- Proprietary apps should be installed locally and under firejail. AUR and non repo apps as well?
