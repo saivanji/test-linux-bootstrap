@@ -9,11 +9,11 @@
   become_user: "{{ user.name }}"
   args:
     chdir: "/home/{{ user.name }}/.node_global"
-    creates: "/home/{{ user.name }}/.node_global/node_modules/bin/prettier"
+    creates: "/home/{{ user.name }}/.node_global/node_modules/.bin/prettier"
 
 - name: install eslint
   command: yarn add eslint
   become_user: "{{ user.name }}"
   args:
     chdir: "/home/{{ user.name }}/.node_global"
-    creates: "/home/{{ user.name }}/.node_global/node_modules/bin/eslint"
+    creates: "/home/{{ user.name }}/.node_global/node_modules/.bin/eslint"
