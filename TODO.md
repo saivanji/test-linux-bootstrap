@@ -10,6 +10,10 @@
 - make terminal color palette
 - how to avoid dns reconfiguring attack
 
+Nodejs
+
+- What permissions apart from the fs nodejs gets?
+
 Neovim
 
 - Snippets (deoplete, neosnippet)
@@ -26,13 +30,15 @@ Neovim
 - slock. suspend on lid close
   -enable slock?
 
+---
+
 - make sure jailing works
 - setup env based install
   - install xorg drivers depending on selected card?
 - check role dependencies
 - vifm colors
 - check ansible bootstrap for the multiple users
+
   - or apply only dotfiles and other user specific roles
-- add /usr/local/bin path to global bashrc
 
 - Proprietary apps should be installed locally and under firejail. AUR and non repo apps as well?
