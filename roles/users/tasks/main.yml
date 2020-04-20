@@ -1,11 +1,12 @@
 ---
 - name: create a user
   user:
-    name: "{{ user.name }}"
-    groups: wheel
+    name: "{{ item.name }}"
+    groups: "{{ item.groups }}"
     create_home: yes
     update_password: on_create
     state: present
+  loop: "{{ users }}"
 
 - name: copy sudoers
   copy:

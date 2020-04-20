@@ -2,12 +2,10 @@ user:
   name: some_name
 
 users:
-  personal:
-    name: personal
-    sudo: true
-  work:
-    name: work
-    sudo: false
+  - name: personal
+    groups: wheel
+  - name: work
+    groups:
 
 screen:
   dpi: 128

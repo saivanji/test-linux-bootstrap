@@ -1,55 +1,64 @@
 - name: copy dotfiles
-  become_user: "{{ user.name }}"
+  become_user: "{{ item.name }}"
   copy:
     src: files/
-    dest: "/home/{{ user.name }}/"
+    dest: "/home/{{ item.name }}/"
+  loop: "{{ users }}"
 
 - name: set executable permissions for files in ~/.local/bin
-  become_user: "{{ user.name }}"
+  become_user: "{{ item.name }}"
   file:
-    path: "/home/{{ user.name }}/.local/bin"
+    path: "/home/{{ item.name }}/.local/bin"
     mode: a+x
     recurse: yes
+  loop: "{{ users }}"
 
 - name: .gtkrc-2.0
-  become_user: "{{ user.name }}"
+  become_user: "{{ item.name }}"
   template:
     src: .gtkrc-2.0.j2
-    dest: "/home/{{ user.name }}/.gtkrc-2.0"
+    dest: "/home/{{ item.name }}/.gtkrc-2.0"
+  loop: "{{ users }}"
 
 - name: gtk-3 settings.ini
-  become_user: "{{ user.name }}"
+  become_user: "{{ item.name }}"
   template:
     src: settings.ini.j2
-    dest: "/home/{{ user.name }}/.config/gtk-3.0/settings.ini"
+    dest: "/home/{{ item.name }}/.config/gtk-3.0/settings.ini"
+  loop: "{{ users }}"
 
 - name: .Xresources
-  become_user: "{{ user.name }}"
+  become_user: "{{ item.name }}"
   template:
     src: .Xresources.j2
-    dest: "/home/{{ user.name }}/.Xresources"
+    dest: "/home/{{ item.name }}/.Xresources"
+  loop: "{{ users }}"
 
 - name: chromium-flags.conf
-  become_user: "{{ user.name }}"
+  become_user: "{{ item.name }}"
   template:
     src: chromium-flags.conf.j2
-    dest: "/home/{{ user.name }}/.config/chromium-flags.conf"
+    dest: "/home/{{ item.name }}/.config/chromium-flags.conf"
+  loop: "{{ users }}"
 
 - name: alacritty.yml
-  become_user: "{{ user.name }}"
+  become_user: "{{ item.name }}"
   template:
     src: alacritty.yml.j2
-    dest: "/home/{{ user.name }}/.config/alacritty/alacritty.yml"
+    dest: "/home/{{ item.name }}/.config/alacritty/alacritty.yml"
+  loop: "{{ users }}"
 
 - name: create vim plug directory
-  become_user: "{{ user.name }}"
+  become_user: "{{ item.name }}"
   file:
-    path: "/home/{{ user.name }}/.local/share/nvim/site/autoload"
+    path: "/home/{{ item.name }}/.local/share/nvim/site/autoload"
     state: directory
+  loop: "{{ users }}"
 
 - name: download vim plug
-  become_user: "{{ user.name }}"
+  become_user: "{{ item.name }}"
   get_url:
     url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    dest: "/home/{{ user.name }}/.local/share/nvim/site/autoload/plug.vim"
+    dest: "/home/{{ item.name }}/.local/share/nvim/site/autoload/plug.vim"
+  loop: "{{ users }}"
 
