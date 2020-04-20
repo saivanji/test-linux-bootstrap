@@ -28,6 +28,4 @@ Neovim
 
 ---
 
-- check ansible bootstrap for the multiple users
-  - or apply only dotfiles and other user specific roles
 - prettier :x

@@ -13,6 +13,20 @@
     recurse: yes
   loop: "{{ users }}"
 
+- name: .config/gtk-3.0 directory
+  become_user: "{{ item.name }}"
+  file:
+    path: "/home/{{ item.name }}/.config/gtk-3.0"
+    state: directory
+  loop: "{{ users }}"
+
+- name: .config/alacritty directory
+  become_user: "{{ item.name }}"
+  file:
+    path: "/home/{{ item.name }}/.config/alacritty"
+    state: directory
+  loop: "{{ users }}"
+
 - name: .gtkrc-2.0
   become_user: "{{ item.name }}"
   template:
