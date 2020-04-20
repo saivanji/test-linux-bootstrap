@@ -54,6 +54,7 @@
       # other
       - firejail
       - vifm
+      - man
     state: present
 
 

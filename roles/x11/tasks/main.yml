@@ -8,3 +8,15 @@
   copy:
     src: 10-mouse.conf
     dest: /etc/X11/xorg.conf.d/10-mouse.conf
+
+- name: copy intel config file
+  copy:
+    src: 20-intel.conf
+    dest: /etc/X11/xorg.conf.d/20-intel.conf
+  when: video == "intel"
+
+- name: copy amd config file
+  copy:
+    src: 20-amdgpu.conf
+    dest: /etc/X11/xorg.conf.d/20-amdgpu.conf
+  when: video == "amd"

@@ -30,15 +30,14 @@ Neovim
 - slock. suspend on lid close
   -enable slock?
 
----
-
-- make sure jailing works
-- setup env based install
-  - install xorg drivers depending on selected card?
-- check role dependencies
-- vifm colors
-- check ansible bootstrap for the multiple users
-
-  - or apply only dotfiles and other user specific roles
+# Notes:
 
 - Proprietary apps should be installed locally and under firejail. AUR and non repo apps as well?
+
+---
+
+- setup env based install
+  - install xorg drivers depending on selected card?
+- check ansible bootstrap for the multiple users
+  - or apply only dotfiles and other user specific roles
+- prettier :x
