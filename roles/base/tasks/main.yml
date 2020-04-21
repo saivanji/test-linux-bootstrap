@@ -18,6 +18,7 @@
       - picom
       - rofi
       - feh
+      - gnome-themes-extra
 
       # browsers
       - chromium
@@ -52,12 +53,13 @@
       - nodejs
       - npm
       - yarn
+      - docker
+      - docker-compose
 
       # other
       - firejail
       - vifm
       - man
-      - gnome-themes-extra
     state: present
 
 - name: install intel video
