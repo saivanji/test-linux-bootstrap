@@ -34,6 +34,13 @@
     state: directory
   loop: "{{ users }}"
 
+- name: .bashrc
+  become_user: "{{ item.name }}"
+  template:
+    src: .bashrc.j2
+    dest: "/home/{{ item.name }}/.bashrc"
+  loop: "{{ users }}"
+
 - name: .gtkrc-2.0
   become_user: "{{ item.name }}"
   template:
