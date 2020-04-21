@@ -95,3 +95,9 @@
     src: /usr/bin/firejail
     dest: /usr/local/bin/yarn
     state: link
+
+- name: jail neovim
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/nvim
+    state: link
