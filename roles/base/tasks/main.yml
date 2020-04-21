@@ -28,17 +28,12 @@
       - neovim
 
       # fonts
+      - noto-fonts
       - ttf-dejavu
       - ttf-roboto
-      - noto-fonts
       - ttf-liberation
       - ttf-ubuntu-font-family
-      - ttf-anonymous-pro
-      - ttf-fira-mono
-      - ttf-fira-code
       - ttf-freefont
-      - adobe-source-code-pro-fonts
-      - otf-font-awesome
 
       # utils
       - fzf
@@ -48,6 +43,7 @@
       - acpi
       - alsa-utils
       - dhcpcd
+      - netctl
 
       # dev
       - nodejs
