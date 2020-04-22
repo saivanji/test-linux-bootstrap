@@ -1,4 +1,8 @@
-Being on the loaded arch installation system, clone this repository. Then, run `./install.sh`. After it finishes successfully, chroot into the installed system and run `passwd` and `passwd <username>` to set passwords.
+# Installation
+
+1. Being on the loaded arch installation system, clone this repository.
+2. Rename group_vars/all.sample.yml to group_vars/all.yml
+3. Run `./install.sh`. After it finishes successfully, chroot into the installed system and run `passwd` and `passwd <username>` to set passwords.
 
 # Networking
 
