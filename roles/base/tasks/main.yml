@@ -5,6 +5,7 @@
     name:
       - alacritty
       - git
+      - openssh
       - thunar
 
       # xorg
