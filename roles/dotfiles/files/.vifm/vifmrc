@@ -1,5 +1,3 @@
 colorscheme gruvbox
 
 only
-
-filetype * nvim
