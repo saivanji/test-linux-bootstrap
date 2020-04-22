@@ -1,0 +1,31 @@
+users:
+  - name: personal
+    groups: wheel
+  - name: work
+    groups:
+
+screen:
+  dpi: 120
+  scale: 1.25
+
+video: intel
+# video: amd
+
+font:
+  sans:
+    family: PT Sans
+    size: 10
+  monospace:
+    family: PT Mono
+    size: 9
+# screen:
+#   dpi: 128
+#   scale: 1.33333333
+
+# screen:
+#   dpi: 120
+#   scale: 1.25
+
+# screen:
+#   dpi: 144
+#   scale: 1.5
