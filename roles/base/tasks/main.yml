@@ -27,6 +27,7 @@
 
       # editors
       - neovim
+      - vim
 
       # fonts
       - noto-fonts
@@ -57,6 +58,7 @@
       - firejail
       - vifm
       - man
+      - dialog
     state: present
 
 - name: install intel video
