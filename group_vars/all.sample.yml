@@ -14,7 +14,7 @@ video: intel
 font:
   sans:
     family: PT Sans
-    size: 10
+    size: 11
   monospace:
     family: PT Mono
     size: 11
