@@ -3,9 +3,17 @@
 1. Being on the loaded arch installation system, clone this repository.
 2. Rename group_vars/all.sample.yml to group_vars/all.yml
 3. Run `./install.sh`
-4. Chroot into the installed system and run `passwd` and `passwd <username>` to set passwords for the users. And `ssh-keygen -p -f /home/<username>/.ssh/id_dsa` to set passphrase for ssh key
+4. Chroot into the installed system and run `passwd` and `passwd <username>` to set passwords for the users.
 
 # Setup
+
+## Docker
+
+Start docker service:
+
+```
+sudo systemctl start docker
+```
 
 ## SSH
 

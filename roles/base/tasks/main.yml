@@ -11,7 +11,6 @@
       # xorg
       - xorg-server
       - xorg-xinit
-      - xorg-xbacklight
 
       # interface
       - bspwm
@@ -86,6 +85,14 @@
       - acpi
     state: present
   when: battery == true
+
+- name: install xbacklight
+  pacman:
+    # update_cache: yes
+    name:
+      - xorg-xbacklight
+    state: present
+  when: backlight == true
 
 - name: jail node
   file:
