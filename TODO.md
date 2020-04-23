@@ -19,6 +19,8 @@ Neovim
 
 - ssh
 - gitconfig
+- do not jail nvim?
+- jellybeans nvim theme?
 
 - slock. suspend on lid close
   -enable slock?
