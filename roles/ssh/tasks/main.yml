@@ -1,0 +1,16 @@
+# - name: generate ssh key
+#   become_user: "{{ item.name }}"
+#   openssh_keypair:
+#     path: "/home/{{ item.name }}/.ssh/id_rsa"
+#     size: 4096
+#     type: rsa
+#   loop: "{{ users }}"
+
+- name: enable ssh-agent systemd service
+  become_user: "{{ item.name }}"
+  systemd:
+    name: ssh-agent
+    state: started
+    enabled: yes
+    scope: user
+  loop: "{{ users }}"
