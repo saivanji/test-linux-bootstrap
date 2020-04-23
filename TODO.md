@@ -18,6 +18,7 @@ Neovim
 # Tasks
 
 - ssh
+- gitconfig
 
 - slock. suspend on lid close
   -enable slock?
