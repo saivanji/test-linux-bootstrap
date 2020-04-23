@@ -34,6 +34,13 @@
     state: directory
   loop: "{{ users }}"
 
+- name: .config/bspwm directory
+  become_user: "{{ item.name }}"
+  file:
+    path: "/home/{{ item.name }}/.config/bspwm"
+    state: directory
+  loop: "{{ users }}"
+
 - name: .config/sxhkd directory
   become_user: "{{ item.name }}"
   file:
@@ -89,6 +96,17 @@
     src: sxhkdrc.j2
     dest: "/home/{{ item.name }}/.config/sxhkd/sxhkdrc"
   loop: "{{ users }}"
+
+- name: bspwmrc
+  become_user: "{{ item.name }}"
+  template:
+    src: bspwmrc.j2
+    dest: "/home/{{ item.name }}/.config/bspwm/bspwmrc"
+  loop: "{{ users }}"
+  loop_control:
+    index_var: user_idx
+  vars:
+    user_idx: "{{ user_idx }}"
 
 - name: create vim plug directory
   become_user: "{{ item.name }}"
