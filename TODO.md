@@ -17,9 +17,7 @@ Neovim
 
 # Tasks
 
-- ssh
-- gitconfig
-- jellybeans nvim theme?
+- ssh agent service can not be enabled
 - password store
 - picom config
 - fd not found in neovim search
@@ -28,6 +26,7 @@ Neovim
 
 # Secondary tasks
 
+- jellybeans nvim theme?
 - map ctrl in tty and not on X level
 
 # Notes:
