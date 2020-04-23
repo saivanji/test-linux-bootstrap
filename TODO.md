@@ -24,7 +24,7 @@ Neovim
 - picom conf
 
 - slock. suspend on lid close
-  -enable slock?
+  - enable slock?
 
 # Notes:
 
