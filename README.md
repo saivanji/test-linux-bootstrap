@@ -7,6 +7,14 @@
 
 # Setup
 
+## Docker
+
+Start docker service:
+
+```
+sudo systemctl start docker
+```
+
 ## SSH
 
 Run the command below for generating ssh key:

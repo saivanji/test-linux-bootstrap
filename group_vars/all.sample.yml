@@ -1,8 +1,8 @@
 users:
   - name: personal
-    groups: wheel
+    groups: wheel,docker
   - name: work
-    groups:
+    groups: docker
 
 screen:
   dpi: 120
