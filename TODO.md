@@ -20,7 +20,7 @@ Neovim
 - ssh
 - gitconfig
 - jellybeans nvim theme?
-- pass
+- password store
 - picom conf
 - fd not found in neovim search
 - slock. suspend on lid close
