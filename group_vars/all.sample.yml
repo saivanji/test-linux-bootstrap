@@ -13,6 +13,8 @@ video: intel
 
 battery: true
 
+backlight: true
+
 font:
   sans:
     family: PT Sans
