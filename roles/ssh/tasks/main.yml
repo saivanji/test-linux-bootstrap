@@ -8,5 +8,9 @@
 
 - name: enable ssh-agent systemd service
   become_user: "{{ item.name }}"
-  command: systemctl --user enable ssh-agent.service
+  systemd:
+    name: ssh-agent
+    state: started
+    enabled: yes
+    scope: user
   loop: "{{ users }}"
