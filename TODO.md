@@ -21,7 +21,7 @@ Neovim
 - gitconfig
 - jellybeans nvim theme?
 - password store
-- picom conf
+- picom config
 - fd not found in neovim search
 - slock. suspend on lid close
   - enable slock service
