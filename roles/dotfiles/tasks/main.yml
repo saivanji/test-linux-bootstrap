@@ -13,13 +13,6 @@
     recurse: yes
   loop: "{{ users }}"
 
-- name: set executable permission for .config/bspwm/bspwmrc
-  become_user: "{{ item.name }}"
-  file:
-    path: "/home/{{ item.name }}/.config/bspwm/bspwmrc"
-    mode: a+x
-  loop: "{{ users }}"
-
 - name: .config/gtk-3.0 directory
   become_user: "{{ item.name }}"
   file:
@@ -107,6 +100,13 @@
     index_var: user_idx
   vars:
     user_idx: "{{ user_idx }}"
+
+- name: set executable permission for .config/bspwm/bspwmrc
+  become_user: "{{ item.name }}"
+  file:
+    path: "/home/{{ item.name }}/.config/bspwm/bspwmrc"
+    mode: a+x
+  loop: "{{ users }}"
 
 - name: create vim plug directory
   become_user: "{{ item.name }}"
