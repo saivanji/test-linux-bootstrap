@@ -10,7 +10,6 @@
     - { role: fonts }
     - { role: locale }
     - { role: network }
-    - { role: ssh }
     - { role: time }
     - { role: users }
     - { role: x11 }

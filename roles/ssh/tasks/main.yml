@@ -1,7 +1,0 @@
-- name: generate ssh key
-  become_user: "{{ item.name }}"
-  openssh_keypair:
-    path: "/home/{{ item.name }}/.ssh/id_rsa"
-    size: 4096
-    type: rsa
-  loop: "{{ users }}"

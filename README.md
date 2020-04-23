@@ -7,7 +7,13 @@
 
 # Setup
 
-## SSH agent
+## SSH
+
+Run the command below for generating ssh key:
+
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
 In order to have ssh running after system boot, enable the following systemd service:
 
