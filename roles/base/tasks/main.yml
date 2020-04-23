@@ -42,7 +42,6 @@
       - ack
       - bash-completion
       - sysstat
-      - acpi
       - alsa-utils
       - dhcpcd
       - netctl
@@ -65,7 +64,7 @@
 
 - name: install intel video
   pacman:
-    update_cache: yes
+    # update_cache: yes
     name:
       - xf86-video-intel
     state: present
@@ -73,11 +72,19 @@
 
 - name: install amd video
   pacman:
-    update_cache: yes
+    # update_cache: yes
     name:
       - xf86-video-amdgpu
     state: present
   when: video == "amd"
+
+- name: install acpi
+  pacman:
+    # update_cache: yes
+    name:
+      - acpi
+    state: present
+  when: battery == true
 
 - name: jail node
   file:

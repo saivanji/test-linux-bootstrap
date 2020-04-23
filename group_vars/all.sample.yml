@@ -11,6 +11,8 @@ screen:
 video: intel
 # video: amd
 
+battery: true
+
 font:
   sans:
     family: PT Sans

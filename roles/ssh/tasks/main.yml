@@ -5,26 +5,3 @@
     size: 4096
     type: rsa
   loop: "{{ users }}"
-
-- name: get personal user id
-  become_user: personal
-  command: id -u
-  register: personaluid
-
-- name: enable ssh-agent systemd service
-  become_user: personal
-  systemd:
-    name: ssh-agent
-    state: started
-    enabled: yes
-    scope: user
-  environment:
-    XDG_RUNTIME_DIR: "/run/user/{{ personaluid.stdout }}"
-# - name: enable ssh-agent systemd service
-#   become_user: "{{ item.name }}"
-#   systemd:
-#     name: ssh-agent
-#     state: started
-#     enabled: yes
-#     scope: user
-#   loop: "{{ users }}"

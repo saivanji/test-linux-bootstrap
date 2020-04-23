@@ -5,9 +5,19 @@
 3. Run `./install.sh`
 4. Chroot into the installed system and run `passwd` and `passwd <username>` to set passwords for the users. And `ssh-keygen -p -f /home/<username>/.ssh/id_dsa` to set passphrase for ssh key
 
-# Networking
+# Setup
 
-## Ethernet
+## SSH agent
+
+In order to have ssh running after system boot, enable the following systemd service:
+
+```
+systemctl enable --user enable ssh-agent.service
+```
+
+## Networking
+
+### Ethernet
 
 Having cable connected, run:
 
@@ -17,7 +27,7 @@ sudo systemctl enable dhcpcd.service
 
 Reboot in order to have changes applied
 
-## WiFi
+### WiFi
 
 Run `sudo wifi-menu` and after you choose network and enter the password, run:
 

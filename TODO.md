@@ -4,7 +4,6 @@
 - use terminus pro in tty? as default font doesn't renders some symbols
 - use monospace font as in github or - https://github.com/vivien/i3blocks-contrib/blob/master/batterybar/screenshot.png . Liberation Mono or simply 'monospace', Roboto Mono(from iceberg), Noto Mono
 - define system color set
-- make terminal and generic black color deeply darkened blue
 - how to avoid dns reconfiguring attack
 
 Nodejs
@@ -17,7 +16,6 @@ Neovim
 
 # Tasks
 
-- ssh agent service can not be enabled
 - password store
 - picom config
 - fd not found in neovim search
