@@ -37,3 +37,5 @@ Neovim
 ---
 
 - prettier :x
+
+https://bbs.archlinux.org/viewtopic.php?pid=802661#p802661
