@@ -54,6 +54,7 @@
       - docker-compose
 
       # other
+      - unzip
       - firejail
       - vifm
       - man
