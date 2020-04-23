@@ -60,6 +60,7 @@
       - man
       - dialog
       - wpa_supplicant
+      - xclip
     state: present
 
 - name: install intel video
