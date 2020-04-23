@@ -8,6 +8,7 @@
 
 - name: enable ssh-agent systemd service
   become_user: "{{ item.name }}"
+  become_method: machinectl
   systemd:
     name: ssh-agent
     state: started
