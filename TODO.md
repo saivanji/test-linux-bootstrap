@@ -24,7 +24,7 @@ Neovim
 - picom conf
 - fd not found in neovim search
 - slock. suspend on lid close
-  - enable slock?
+  - enable slock service
 
 # Secondary tasks
 
