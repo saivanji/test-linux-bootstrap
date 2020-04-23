@@ -22,9 +22,13 @@ Neovim
 - jellybeans nvim theme?
 - pass
 - picom conf
-
+- fd not found in neovim search
 - slock. suspend on lid close
   - enable slock?
+
+# Secondary tasks
+
+- map ctrl in tty and not on X level
 
 # Notes:
 
