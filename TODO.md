@@ -16,6 +16,7 @@ Neovim
 
 # Tasks
 
+- jail firefox and chromium
 - password store
 - picom config
 - fd not found in neovim search

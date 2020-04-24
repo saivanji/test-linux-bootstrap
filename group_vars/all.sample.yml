@@ -11,7 +11,7 @@ screen:
 video: intel
 # video: amd
 
-disk: /dev/sda
+disk: sda
 
 battery: true
 
