@@ -11,6 +11,8 @@ screen:
 video: intel
 # video: amd
 
+disk: /dev/sda
+
 battery: true
 
 backlight: true

@@ -16,7 +16,6 @@ Neovim
 
 # Tasks
 
-- ask disk id in the install script, consider changing sda3 in boot
 - password store
 - picom config
 - fd not found in neovim search
