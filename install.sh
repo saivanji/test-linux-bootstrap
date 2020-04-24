@@ -2,42 +2,48 @@
 
 echo "Enter disk name"
 read DISK_NAME
+echo "Enter boot partition name"
+read BOOT_PARTITION_NAME
+echo "Enter swap partition name"
+read SWAP_PARTITION_NAME
+echo "Enter system partition name"
+read SYS_PARTITION_NAME
 
 # set up the clock
 timedatectl set-ntp true &&
 
-# wipe all on the disk
-sgdisk -Z $DISK_NAME &&
+# wipe all data on the disk
+sgdisk -Z "/dev/"$DISK_NAME &&
 # create new partition table
-sgdisk -a 2048 -o $DISK_NAME &&
+sgdisk -a 2048 -o "/dev/"$DISK_NAME &&
 # create boot partition
-sgdisk -n 1:0:+512M $DISK_NAME &&
+sgdisk -n 1:0:+512M "/dev/"$DISK_NAME &&
 # create swap partition
-sgdisk -n 2:0:+2G $DISK_NAME &&
+sgdisk -n 2:0:+2G "/dev/"$DISK_NAME &&
 # create main partition
-sgdisk -n 3:0:0 $DISK_NAME &&
+sgdisk -n 3:0:0 "/dev/"$DISK_NAME &&
 # set boot partition type
-sgdisk -t 1:ef00 $DISK_NAME &&
+sgdisk -t 1:ef00 "/dev/"$DISK_NAME &&
 # set swap partition type
-sgdisk -t 2:8200 $DISK_NAME &&
+sgdisk -t 2:8200 "/dev/"$DISK_NAME &&
 # set main partition type
-sgdisk -t 3:8300 $DISK_NAME &&
+sgdisk -t 3:8300 "/dev/"$DISK_NAME &&
 
 # format boot partition
-mkfs.vfat $DISK_NAME"1" &&
+mkfs.vfat "/dev/"$BOOT_PARTITION_NAME &&
 # format swap partition
-mkswap $DISK_NAME"2" &&
+mkswap "/dev/"$SWAP_PARTITION_NAME &&
 # format main partition
-mkfs.ext4 $DISK_NAME"3" &&
+mkfs.ext4 "/dev/"$SYS_PARTITION_NAME &&
 # enable swap
-swapon $DISK_NAME"2" &&
+swapon "/dev/"$SWAP_PARTITION_NAME &&
 
 # mount main partition
-mount $DISK_NAME"3" /mnt &&
+mount "/dev/"$SYS_PARTITION_NAME /mnt &&
 # create boot dir
 mkdir /mnt/boot &&
 # mount boot
-mount $DISK_NAME"1" /mnt/boot &&
+mount "/dev/"$BOOT_PARTITION_NAME /mnt/boot &&
 
 # set repository mirror
 echo Server = http://mirror.datacenter.by/pub/archlinux/\$repo/os/\$arch > /etc/pacman.d/mirrorlist &&
