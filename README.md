@@ -9,10 +9,10 @@
 
 ## Docker
 
-Start docker service:
+Enable docker service:
 
 ```
-sudo systemctl start docker
+sudo systemctl enable docker
 ```
 
 ## SSH
