@@ -26,7 +26,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 In order to have ssh running after system boot, enable the following systemd service:
 
 ```
-systemctl enable --user enable ssh-agent.service
+systemctl --user enable ssh-agent.service
 ```
 
 ## Networking
