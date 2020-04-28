@@ -29,6 +29,20 @@ In order to have ssh running after system boot, enable the following systemd ser
 systemctl --user enable ssh-agent.service
 ```
 
+## Bluetooth
+
+Load `modprobe` kernel module:
+
+```
+sudo modprobe btusb
+```
+
+Enable bluetooth service:
+
+```
+sudo systemctl enable bluetooth
+```
+
 ## Networking
 
 ### Ethernet
