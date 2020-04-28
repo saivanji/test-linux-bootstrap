@@ -19,6 +19,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'typescript'] }
 
 call plug#end()
 
