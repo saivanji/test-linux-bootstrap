@@ -45,6 +45,10 @@
       - dhcpcd
       - netctl
 
+      # audio
+      - pulseaudio
+      - pulseaudio-bluetooth
+
       # dev
       - nodejs
       - npm
