@@ -49,6 +49,9 @@
       - pulseaudio
       - pulseaudio-bluetooth
 
+      # viewers
+      - atril
+
       # dev
       - nodejs
       - npm
