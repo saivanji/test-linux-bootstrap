@@ -21,6 +21,7 @@ Neovim
 - fd not found in neovim search
 - slock. suspend on lid close
   - enable slock service
+- make gtk regular font smaller?
 
 # Secondary tasks
 
