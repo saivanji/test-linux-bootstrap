@@ -23,6 +23,7 @@ Neovim
   - enable slock service
 - make gtk regular font smaller?
 - consider writing custom file formatting script instead of prettier vim plugin like (1,\$!prettier --stdin-filepath=.js)
+- apparmor firejail integration
 
 # Secondary tasks
 
