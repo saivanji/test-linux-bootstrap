@@ -39,6 +39,7 @@
       # utils
       - fzf
       - ack
+      - fd
       - bash-completion
       - sysstat
       - alsa-utils
