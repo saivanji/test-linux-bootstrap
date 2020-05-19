@@ -71,6 +71,7 @@
       - unzip
       - firejail
       - vifm
+      - ranger
       - man
       - dialog
       - wpa_supplicant
