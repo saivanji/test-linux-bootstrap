@@ -15,12 +15,12 @@ Plug 'prettier/vim-prettier', {
 Plug 'justinmk/vim-dirvish'
 Plug 'dyng/ctrlsf.vim', { 'on': 'CtrlSF' }
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers'] }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'typescript'] }
 Plug 'jparise/vim-graphql', { 'for': ['graphql'] }
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -36,7 +36,16 @@ set termguicolors
 
 " Color scheme
 set background=dark
-colorscheme oceanics
+colorscheme onedark
+
+hi Normal guibg=none
+hi LineNr guibg=none
+hi EndOfBuffer guibg=none
+hi CursorLineNr guibg=none
+hi StatusLine gui=none guibg=none guifg=none
+hi SignColumn guibg=none
+hi MatchParen gui=underline guibg=none
+hi NonText guibg=none
 
 " Invisible characters
 set listchars=eol:¬,space:·,tab:--,trail:·,extends:>,precedes:<
