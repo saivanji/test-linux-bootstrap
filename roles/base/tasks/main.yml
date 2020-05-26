@@ -136,6 +136,12 @@
     dest: /usr/local/bin/npm
     state: link
 
+- name: jail npx
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/npx
+    state: link
+
 - name: jail yarn
   file:
     src: /usr/bin/firejail
