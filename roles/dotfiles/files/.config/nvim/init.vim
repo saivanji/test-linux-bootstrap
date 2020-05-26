@@ -84,6 +84,10 @@ function! FileNameSL()
   return strlen(l:name) ? '‹‹ ' . l:name . ' ››' : l:name
 endfunction
 
+function! LineNrSL()
+  return '' . line(".")
+endfunction
+
 set laststatus=2
 set statusline=
 " set statusline+=\%{GitBranchSL()}
@@ -91,6 +95,7 @@ set statusline+=\ %{FileNameSL()}
 set statusline+=\ %m
 set statusline+=%=
 set statusline+=\ ‹‹
+set statusline+=\ %{LineNrSL()}
 set statusline+=\ %p%%
 set statusline+=\%{FileTypeSL()}
 set statusline+=\ ››
