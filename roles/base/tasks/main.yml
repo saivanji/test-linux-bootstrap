@@ -16,6 +16,7 @@
       - bspwm
       - sxhkd
       - picom
+      - dzen2
       - rofi
       - feh
       - gnome-themes-extra
