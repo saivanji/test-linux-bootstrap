@@ -45,6 +45,8 @@
       - alsa-utils
       - dhcpcd
       - netctl
+      - wireless_tools
+      - iw
 
       # audio
       - pulseaudio
