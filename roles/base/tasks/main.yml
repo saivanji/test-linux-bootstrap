@@ -69,6 +69,7 @@
       - yarn
       - docker
       - docker-compose
+      - gcc
 
       # other
       - unzip
