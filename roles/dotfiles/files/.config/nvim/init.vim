@@ -20,6 +20,7 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'typescript'] }
 Plug 'jparise/vim-graphql', { 'for': ['graphql'] }
+Plug 'rhysd/vim-clang-format', { 'for': ['c'] }
 Plug 'joshdick/onedark.vim'
 
 call plug#end()
@@ -163,6 +164,9 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
 let g:prettier#exec_cmd_async = 1
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+" Clang format
+autocmd BufWritePre *.c ClangFormat
 
 " Ale
 let g:ale_sign_error = '››'
