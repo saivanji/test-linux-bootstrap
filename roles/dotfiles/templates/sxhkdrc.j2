@@ -16,7 +16,7 @@ super + w
 
 # color picker
 super + e
-  gpick -so --no-start | xclip -sel clip
+  if pgrep -x gpick > /dev/null; then killall gpick; else gpick -so --no-start | xclip -sel clip; fi;
 
 # make sxhkd reload its configuration files:
 super + Escape
