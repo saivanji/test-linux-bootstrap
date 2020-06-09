@@ -14,9 +14,9 @@ super + d
 super + w
   sleep 0.1 && scrot -f -s -e 'mv $f ~/Screenshots/$f'
 
-# capture screenshot and open it in Gimp
+# color picker
 super + e
-  sleep 0.1 && scrot -f -s -e 'export scr=~/Screenshots/$f && mv $f $scr && gimp $scr && rm $scr'
+  gpick -so --no-start | xclip -sel clip
 
 # make sxhkd reload its configuration files:
 super + Escape
