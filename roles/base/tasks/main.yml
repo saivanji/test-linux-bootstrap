@@ -11,6 +11,7 @@
       # xorg
       - xorg-server
       - xorg-xinit
+      - xorg-xsetroot
 
       # interface
       - bspwm
@@ -48,6 +49,7 @@
       - netctl
       - wireless_tools
       - iw
+      - wpa_supplicant
 
       # audio
       - pulseaudio
@@ -81,7 +83,6 @@
       - ranger
       - man
       - dialog
-      - wpa_supplicant
       - xclip
       - bluez
       - bluez-utils
