@@ -21,6 +21,7 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'typescript'] }
 Plug 'jparise/vim-graphql', { 'for': ['graphql'] }
 Plug 'rhysd/vim-clang-format', { 'for': ['c'] }
+Plug 'digitaltoad/vim-pug', { 'for': ['pug'] }
 Plug 'joshdick/onedark.vim'
 
 call plug#end()
