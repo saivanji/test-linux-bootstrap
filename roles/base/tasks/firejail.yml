@@ -1,9 +1,3 @@
-- name: jail makepkg
-  file:
-    src: /usr/bin/makepkg
-    dest: /usr/local/bin/makepkg
-    state: link
-
 - name: jail firefox
   file:
     src: /usr/bin/firejail
@@ -39,8 +33,3 @@
     src: /usr/bin/firejail
     dest: /usr/local/bin/yarn
     state: link
-
-- name: copy makepkg.local file
-  copy:
-    src: makepkg.local
-    dest: /etc/firejail/makepkg.local
