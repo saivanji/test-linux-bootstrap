@@ -5,7 +5,7 @@
 3. Run `./install.sh`
 4. Chroot into the installed system and run `passwd` and `passwd <username>` to set passwords for the users.
 
-# Setup
+# Post install
 
 ## Docker
 
@@ -64,3 +64,7 @@ sudo netctl enable <generated_profile>
 ```
 
 Reboot in order to have changes applied
+
+## Aur packages
+
+For every directory in ~/Aur run `makepkg -si` to download and install aur packages
