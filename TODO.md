@@ -14,6 +14,10 @@ Neovim
 
 - Snippets (deoplete, neosnippet)
 
+# Issues
+
+- It seems makepkg local profile is not taken into the account
+
 # Tasks
 
 - password store
