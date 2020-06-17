@@ -41,6 +41,13 @@
     state: directory
   loop: "{{ users }}"
 
+- name: .config/polybar directory
+  become_user: "{{ item.name }}"
+  file:
+    path: "/home/{{ item.name }}/.config/polybar"
+    state: directory
+  loop: "{{ users }}"
+
 - name: .bashrc
   become_user: "{{ item.name }}"
   template:
@@ -100,6 +107,13 @@
     index_var: user_idx
   vars:
     user_idx: "{{ user_idx }}"
+
+- name: polybar config
+  become_user: "{{ item.name }}"
+  template:
+    src: polybar.config.j2
+    dest: "/home/{{ item.name }}/.config/polybar/config"
+  loop: "{{ users }}"
 
 - name: set executable permission for .config/bspwm/bspwmrc
   become_user: "{{ item.name }}"

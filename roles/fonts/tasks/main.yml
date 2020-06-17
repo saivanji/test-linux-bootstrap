@@ -1,7 +1,12 @@
 ---
-- name: Copy fonts
+- name: Copy PT fonts
   copy:
     src: "{{ item }}"
     dest: "/usr/share/fonts/paratype/"
   with_fileglob:
-    - "files/*"
+    - "files/paratype/*"
+
+- name: Copy Material Design fonts
+  copy:
+    src: materialdesignicons-webfont.ttf
+    dest: "/usr/share/fonts/materialdesignicons/"
