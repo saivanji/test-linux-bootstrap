@@ -76,6 +76,7 @@
       - gcc
       - clang
       - base-devel
+      - postgresql
 
       # other
       - unzip
