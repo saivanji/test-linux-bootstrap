@@ -1,0 +1,46 @@
+- name: jail makepkg
+  file:
+    src: /usr/bin/makepkg
+    dest: /usr/local/bin/makepkg
+    state: link
+
+- name: jail firefox
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/firefox
+    state: link
+
+- name: jail chromium
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/chromium
+    state: link
+
+- name: jail node
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/node
+    state: link
+
+- name: jail npm
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/npm
+    state: link
+
+- name: jail npx
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/npx
+    state: link
+
+- name: jail yarn
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/yarn
+    state: link
+
+- name: copy makepkg.local file
+  copy:
+    src: makepkg.local
+    dest: /etc/firejail/makepkg.local

@@ -75,6 +75,7 @@
       - docker-compose
       - gcc
       - clang
+      - base-devel
 
       # other
       - unzip
@@ -120,38 +121,5 @@
     state: present
   when: backlight == true
 
-- name: jail firefox
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/firefox
-    state: link
-
-- name: jail chromium
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/chromium
-    state: link
-
-- name: jail node
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/node
-    state: link
-
-- name: jail npm
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/npm
-    state: link
-
-- name: jail npx
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/npx
-    state: link
-
-- name: jail yarn
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/yarn
-    state: link
+- include: aur.yml
+- include: firejail.yml

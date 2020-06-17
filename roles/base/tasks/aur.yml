@@ -1,0 +1,11 @@
+- name: create directory for aur packages
+  become_user: "{{ users[0].name }}"
+  file:
+    path: "/home/{{ users[0].name }}/Aur"
+    state: directory
+
+- name: clone Polybar
+  become_user: "{{ users[0].name }}"
+  git:
+    repo: https://aur.archlinux.org/polybar.git
+    dest: "/home/{{ users[0].name }}/Aur/polybar"
