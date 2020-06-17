@@ -18,6 +18,10 @@ super + w
 super + e
   if pgrep -x gpick > /dev/null; then killall gpick; else gpick -so --no-start | xclip -sel clip; fi;
 
+# open clipboard in mpv
+super + {shift+m}
+  bspc rule -a \* -o state=floating && xclip -o | mpv $(xclip -o)
+
 # make sxhkd reload its configuration files:
 super + Escape
   pkill -USR1 -x sxhkd
