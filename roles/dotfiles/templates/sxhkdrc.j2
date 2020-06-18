@@ -6,6 +6,9 @@
 super + Return
   alacritty
 
+super + shift + Return
+  bspc rule -a \* -o state=floating && alacritty
+
 # program launcher
 super + d
   rofi -show run -dpi {{ screen.dpi }} -font "PT Mono 12"
