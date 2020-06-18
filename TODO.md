@@ -18,6 +18,7 @@ Neovim
 
 # Tasks
 
+- fonts - plex mono, space mono, fira code
 - password store
 - picom config
 - fd not found in neovim search
