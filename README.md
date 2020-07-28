@@ -67,4 +67,4 @@ Reboot in order to have changes applied
 
 ## Aur packages
 
-For every directory in ~/Aur run `makepkg -si` to download and install aur packages
+For every directory in ~/Aur run `makepkg -si` as a normal user to download and install aur packages
