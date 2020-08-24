@@ -13,6 +13,14 @@
     recurse: yes
   loop: "{{ users }}"
 
+- name: set executable permissions for files in ~/.config/polybar/scripts
+  become_user: "{{ item.name }}"
+  file:
+    path: "/home/{{ item.name }}/.config/polybar/scripts"
+    mode: a+x
+    recurse: yes
+  loop: "{{ users }}"
+
 - name: .config/gtk-3.0 directory
   become_user: "{{ item.name }}"
   file:
