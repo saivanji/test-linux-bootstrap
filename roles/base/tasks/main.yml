@@ -45,11 +45,14 @@
       - bash-completion
       - sysstat
       - alsa-utils
+
+      # network
       - dhcpcd
       - netctl
       - wireless_tools
       - iw
       - wpa_supplicant
+      - openvpn
 
       # audio
       - pulseaudio

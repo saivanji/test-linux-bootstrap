@@ -51,7 +51,7 @@ font-1 = Material Design Icons:style=Regular:pixelsize=11;1
 
 modules-left = bspwm
 ; modules-center = mpd
-modules-right = xkeyboard cpu wlan bluetooth eth battery date
+modules-right = xkeyboard cpu wlan bluetooth openvpn eth battery date
 
 tray-position = right
 tray-padding = 2
@@ -156,6 +156,11 @@ ramp-capacity-foreground = ${colors.foreground}
 [module/bluetooth]
 type = custom/script
 exec = ~/.config/polybar/scripts/bluetooth.sh
+interval = 2
+
+[module/openvpn]
+type = custom/script
+exec = ~/.config/polybar/scripts/openvpn.sh
 interval = 2
 
 [settings]
