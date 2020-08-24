@@ -153,6 +153,11 @@ ramp-capacity-9 = 󰂂
 ramp-capacity-10 = 󰁹
 ramp-capacity-foreground = ${colors.foreground}
 
+[module/bluetooth]
+type = custom/script
+exec = ~/.config/polybar/bluetooth.sh
+interval = 2
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
