@@ -51,7 +51,7 @@ font-1 = Material Design Icons:style=Regular:pixelsize=11;1
 
 modules-left = bspwm
 ; modules-center = mpd
-modules-right = xkeyboard cpu wlan bluetooth openvpn eth battery date
+modules-right = xkeyboard wlan bluetooth openvpn eth battery date
 
 tray-position = right
 tray-padding = 2
@@ -90,12 +90,6 @@ label-urgent-padding = 1
 label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
-
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix-foreground = ${colors.foreground-alt}
-label = 󰻠%percentage:2%%
 
 [module/wlan]
 type = internal/network
