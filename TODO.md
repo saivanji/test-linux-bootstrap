@@ -27,9 +27,13 @@ Neovim
 - make gtk regular font smaller?
 - consider writing custom file formatting script instead of prettier vim plugin like (1,\$!prettier --stdin-filepath=.js)
 - apparmor firejail integration
-- rofi
+- rofi control
   - vpn
   - bluetooth
+  - screenshot?
+  - color picker?
+  - clipboard mpv?
+- separate rofi instances
   - pass
   - volume
 
