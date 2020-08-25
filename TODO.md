@@ -36,6 +36,7 @@ Neovim
 - separate rofi instances
   - pass
   - volume
+- setup window swallowing
 
 # Secondary tasks
 
@@ -44,7 +45,7 @@ Neovim
 
 # Notes:
 
-- Proprietary apps should be installed locally and under firejail. AUR and non repo apps as well?
+- Proprietary apps should be installed locally and under firejail.
 
 ---
 
