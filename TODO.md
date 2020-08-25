@@ -37,6 +37,7 @@ Neovim
   - pass
   - volume
 - setup window swallowing
+- display vpn profile in polybar
 
 # Secondary tasks
 
