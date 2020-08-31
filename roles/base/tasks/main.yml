@@ -25,6 +25,7 @@
       # browsers
       - chromium
       - firefox
+      - firefox-developer-edition
 
       # editors
       - neovim
