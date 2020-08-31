@@ -4,6 +4,12 @@
     dest: /usr/local/bin/firefox
     state: link
 
+- name: jail firefox-developer-edition
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/firefox-developer-edition
+    state: link
+
 - name: jail chromium
   file:
     src: /usr/bin/firejail
