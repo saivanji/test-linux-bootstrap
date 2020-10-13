@@ -39,3 +39,9 @@
     src: /usr/bin/firejail
     dest: /usr/local/bin/yarn
     state: link
+
+- name: jail telegram-desktop
+  file:
+    src: /usr/bin/firejail
+    dest: /usr/local/bin/telegram-desktop
+    state: link
