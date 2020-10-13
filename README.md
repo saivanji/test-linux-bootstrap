@@ -68,3 +68,7 @@ Reboot in order to have changes applied
 ## Aur packages
 
 For every directory in ~/Aur run `makepkg -si` as a normal user to download and install aur packages
+
+## Proprietary packages
+
+- Slack. Temporary un-jail slack with `sudo rm /usr/local/bin/slack` command sign in with Firefox and apply playbook again to jail it back.
