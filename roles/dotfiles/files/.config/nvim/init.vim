@@ -172,7 +172,7 @@ autocmd BufWritePre *.c ClangFormat
 " Ale
 let g:ale_sign_error = '››'
 let g:ale_linters = {
-\   'javascript': ['flow-language-server'],
+\   'javascript': ['eslint', 'flow-language-server'],
 \}
 
 " Go to definition
