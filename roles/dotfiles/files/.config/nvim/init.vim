@@ -171,6 +171,9 @@ autocmd BufWritePre *.c ClangFormat
 
 " Ale
 let g:ale_sign_error = '››'
+let g:ale_linters = {
+\   'javascript': ['eslint', 'flow-language-server'],
+\}
 
 " Go to definition
 nnoremap <C-i> :ALEGoToDefinition<CR>
