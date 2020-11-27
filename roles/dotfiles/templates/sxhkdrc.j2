@@ -11,7 +11,7 @@ super + shift + Return
 
 # program launcher
 super + d
-  rofi -show run -dpi {{ screen.dpi }} -font "PT Mono 12"
+  rofi -show run -dpi {{ screen.dpi }} -font "{{ font.monospace.family }} {{ font.monospace.size }}"
 
 # capture screenshot
 super + w

@@ -38,6 +38,8 @@
       - ttf-liberation
       - ttf-ubuntu-font-family
       - ttf-freefont
+      - ttf-fira-sans
+      - ttf-fira-mono
 
       # utils
       - fzf

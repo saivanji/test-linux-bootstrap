@@ -19,10 +19,10 @@ backlight: true
 
 font:
   sans:
-    family: PT Sans
+    family: Fira Sans
     size: 11
   monospace:
-    family: PT Mono
+    family: Fira Mono
     size: 11
 # screen:
 #   dpi: 128
