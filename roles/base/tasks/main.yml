@@ -48,6 +48,7 @@
       - bash-completion
       - sysstat
       - alsa-utils
+      - ueberzug
 
       # network
       - dhcpcd
