@@ -22,8 +22,8 @@ font:
     family: Fira Sans
     size: 11
   monospace:
-    family: Fira Mono
-    size: 11
+    family: Fantasque Sans Mono
+    size: 12
 # screen:
 #   dpi: 128
 #   scale: 1.33333333
