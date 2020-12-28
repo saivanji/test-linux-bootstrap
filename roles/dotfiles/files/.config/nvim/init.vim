@@ -9,6 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'neoclide/coc.nvim'
 Plug 'dense-analysis/ale'
 Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
@@ -22,6 +23,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'typescript'] }
 Plug 'jparise/vim-graphql', { 'for': ['graphql'] }
 Plug 'rhysd/vim-clang-format', { 'for': ['c'] }
 Plug 'digitaltoad/vim-pug', { 'for': ['pug'] }
+Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
 
 call plug#end()
@@ -177,3 +179,9 @@ let g:ale_linters = {
 
 " Go to definition
 nnoremap <C-i> :ALEGoToDefinition<CR>
+
+" Coc
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
