@@ -72,3 +72,8 @@ For every directory in ~/Aur run `makepkg -si` as a normal user to download and 
 ## Proprietary packages
 
 - Slack. Temporary un-jail slack with `sudo rm /usr/local/bin/slack` command sign in with Firefox and apply playbook again to jail it back.
+
+## NeoVim
+
+- Run :PlugInstall
+- Run :CocInstall coc-tsserver coc-json coc-html coc-css
