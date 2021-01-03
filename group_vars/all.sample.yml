@@ -1,6 +1,6 @@
 users:
   - name: personal
-    groups: wheel,docker
+    groups: wheel,docker,libvirt
   - name: work
     groups: docker
 
