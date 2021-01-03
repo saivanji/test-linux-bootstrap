@@ -13,6 +13,8 @@ video: intel
 
 system_partition: sda3
 
+virt: false
+
 battery: true
 
 backlight: true

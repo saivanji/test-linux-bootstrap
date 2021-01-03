@@ -77,3 +77,7 @@ For every directory in ~/Aur run `makepkg -si` as a normal user to download and 
 
 - Run :PlugInstall
 - Run :CocInstall coc-tsserver coc-json coc-html coc-css
+
+## Virtualization
+
+Define "virt: true" in "all.yml" file and follow the guide at https://dennisnotes.com/note/20180614-ubuntu-18.04-qemu-setup/
