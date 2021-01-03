@@ -135,6 +135,8 @@
       - virt-manager
       - virt-viewer
       - spice-vdagent
+      - ebtables
+      - dnsmasq
     state: present
   when: virt == true
 

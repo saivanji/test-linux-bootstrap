@@ -80,7 +80,7 @@ For every directory in ~/Aur run `makepkg -si` as a normal user to download and 
 
 ## Virtualization
 
-Define "virt: true" in "all.yml" file and follow the guide at https://dennisnotes.com/note/20180614-ubuntu-18.04-qemu-setup/
+Define "virt: true" in "all.yml" file
 
 Start the following services after the installation:
 
@@ -93,3 +93,11 @@ and
 ```
 systemctl start virtlogd.service
 ```
+
+Start default network
+
+```
+virsh net-start default
+```
+
+Follow the guide at https://dennisnotes.com/note/20180614-ubuntu-18.04-qemu-setup/ with the exception of skipping the step 8 (network configuration)
