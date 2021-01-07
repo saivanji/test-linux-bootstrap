@@ -100,7 +100,6 @@
 
 - name: install intel video
   pacman:
-    # update_cache: yes
     name:
       - xf86-video-intel
     state: present
@@ -108,7 +107,6 @@
 
 - name: install amd video
   pacman:
-    # update_cache: yes
     name:
       - xf86-video-amdgpu
     state: present
@@ -116,7 +114,6 @@
 
 - name: install acpi
   pacman:
-    # update_cache: yes
     name:
       - acpi
     state: present
@@ -124,11 +121,24 @@
 
 - name: install xbacklight
   pacman:
-    # update_cache: yes
     name:
       - xorg-xbacklight
     state: present
   when: backlight == true
+
+- name: install virtualization tools
+  pacman:
+    name:
+      - qemu
+      - libvirt
+      - bridge-utils
+      - virt-manager
+      - virt-viewer
+      - spice-vdagent
+      - ebtables
+      - dnsmasq
+    state: present
+  when: virt == true
 
 - include: aur.yml
 - include: firejail.yml

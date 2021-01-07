@@ -1,6 +1,6 @@
 users:
   - name: personal
-    groups: wheel,docker
+    groups: wheel,docker,libvirt
   - name: work
     groups: docker
 
@@ -12,6 +12,8 @@ video: intel
 # video: amd
 
 system_partition: sda3
+
+virt: false
 
 battery: true
 

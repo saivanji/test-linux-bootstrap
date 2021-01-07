@@ -77,3 +77,27 @@ For every directory in ~/Aur run `makepkg -si` as a normal user to download and 
 
 - Run :PlugInstall
 - Run :CocInstall coc-tsserver coc-json coc-html coc-css
+
+## Virtualization
+
+Define "virt: true" in "all.yml" file
+
+Start the following services after the installation:
+
+```
+systemctl start libvirtd.service
+```
+
+and
+
+```
+systemctl start virtlogd.service
+```
+
+Start default network
+
+```
+virsh net-start default
+```
+
+Follow the guide at https://dennisnotes.com/note/20180614-ubuntu-18.04-qemu-setup/ with the exception of skipping the step 8 (network configuration)
