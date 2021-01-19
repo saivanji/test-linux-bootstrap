@@ -24,6 +24,7 @@ Plug 'jparise/vim-graphql', { 'for': ['graphql'] }
 Plug 'rhysd/vim-clang-format', { 'for': ['c'] }
 Plug 'digitaltoad/vim-pug', { 'for': ['pug'] }
 Plug 'jiangmiao/auto-pairs'
+Plug 'leafgarland/typescript-vim'
 Plug 'joshdick/onedark.vim'
 
 call plug#end()
