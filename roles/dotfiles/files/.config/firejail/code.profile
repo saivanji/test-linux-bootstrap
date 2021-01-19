@@ -2,7 +2,7 @@ include /etc/firejail/code.profile
 
 
 mkdir ${HOME}/.config/Code
-mkdir ${HOME}/.config/.vscode
+mkdir ${HOME}/.vscode
 
 whitelist ${HOME}/.config/Code
 whitelist ${HOME}/.vscode
