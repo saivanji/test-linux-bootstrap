@@ -30,7 +30,6 @@
       # editors
       - neovim
       - vim
-      - code
 
       # fonts
       - noto-fonts
