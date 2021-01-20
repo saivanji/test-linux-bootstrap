@@ -26,6 +26,7 @@ Plug 'digitaltoad/vim-pug', { 'for': ['pug'] }
 Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
 Plug 'joshdick/onedark.vim'
+Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 
@@ -41,7 +42,7 @@ set termguicolors
 
 " Color scheme
 set background=dark
-colorscheme onedark
+colorscheme jellybeans
 
 hi Normal guibg=none
 hi LineNr guibg=none
