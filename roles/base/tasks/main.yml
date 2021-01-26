@@ -50,6 +50,7 @@
       - sysstat
       - alsa-utils
       - ueberzug
+      - translate-shell
 
       # network
       - dhcpcd
