@@ -75,6 +75,7 @@ For every directory in ~/Aur run `makepkg -si` as a normal user to download and 
 
 ## NeoVim
 
+- Execute `rustup component add rls rust-analysis rust-src` command in terminal
 - Run :PlugInstall
 - Run :CocInstall coc-tsserver coc-json coc-html coc-css coc-highlight coc-rls
 
