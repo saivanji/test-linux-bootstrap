@@ -5,14 +5,6 @@
     dest: "/home/{{ item.name }}/"
   loop: "{{ users }}"
 
-- name: set executable permissions for files in ~/.local/bin
-  become_user: "{{ item.name }}"
-  file:
-    path: "/home/{{ item.name }}/.local/bin"
-    mode: a+x
-    recurse: yes
-  loop: "{{ users }}"
-
 - name: set executable permissions for files in ~/.config/polybar/scripts
   become_user: "{{ item.name }}"
   file:

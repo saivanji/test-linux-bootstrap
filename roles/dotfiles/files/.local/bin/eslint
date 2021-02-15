@@ -1,2 +1,0 @@
-#!/bin/bash
-node ~/.node_global/node_modules/.bin/eslint $@
