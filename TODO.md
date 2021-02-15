@@ -38,6 +38,7 @@ Neovim
   - volume
 - setup window swallowing
 - display vpn profile in polybar
+- display rss news list in desktop
 
 # Secondary tasks
 
