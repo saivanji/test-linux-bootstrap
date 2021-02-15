@@ -5,6 +5,7 @@
   roles:
     - { role: base }
     - { role: boot }
+    - { role: development }
     - { role: dotfiles }
     - { role: fonts }
     - { role: locale }

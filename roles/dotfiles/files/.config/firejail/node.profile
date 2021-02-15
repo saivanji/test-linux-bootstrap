@@ -10,3 +10,4 @@ whitelist ${HOME}/.local/share/nvim/plugged
 whitelist ${HOME}/.config/coc
 whitelist ${HOME}/Projects
 whitelist ${HOME}/.eslintrc.js
+whitelist ${HOME}/.rustup

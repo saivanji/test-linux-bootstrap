@@ -6,27 +6,32 @@ set ttyfast
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Base
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim'
-Plug 'dense-analysis/ale'
+Plug 'justinmk/vim-dirvish'
+Plug 'jiangmiao/auto-pairs'
+Plug 'joshdick/onedark.vim'
+Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers'] }
+
+" Syntax support
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
+Plug 'jparise/vim-graphql', { 'for': ['graphql'] }
+Plug 'digitaltoad/vim-pug', { 'for': ['pug'] }
+Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
+
+" Formatting
+Plug 'rhysd/vim-clang-format', { 'for': ['c'] }
 Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-Plug 'justinmk/vim-dirvish'
-Plug 'dyng/ctrlsf.vim', { 'on': 'CtrlSF' }
-Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers'] }
-" Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+
+" Other
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'typescript'] }
-Plug 'jparise/vim-graphql', { 'for': ['graphql'] }
-Plug 'rhysd/vim-clang-format', { 'for': ['c'] }
-Plug 'digitaltoad/vim-pug', { 'for': ['pug'] }
-Plug 'jiangmiao/auto-pairs'
-Plug 'leafgarland/typescript-vim'
-Plug 'joshdick/onedark.vim'
-Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 
@@ -42,7 +47,7 @@ set termguicolors
 
 " Color scheme
 set background=dark
-colorscheme jellybeans
+colorscheme onedark
 
 hi Normal guibg=none
 hi LineNr guibg=none
@@ -76,12 +81,6 @@ function! FileTypeSL()
   return strlen(l:filetype) ? ' :: ' . l:filetype : ''
 endfunction
 
-" Causes cursor blinking in conjunction with ALE
-function! GitBranchSL()
-  let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-  return strlen(l:branchname) > 0 ? '[' . l:branchname . ']' : ''
-endfunction
-
 function! FileNameSL()
   let l:filepath = expand('%:p')
   let l:visible = 30
@@ -96,7 +95,6 @@ endfunction
 
 set laststatus=2
 set statusline=
-" set statusline+=\%{GitBranchSL()}
 set statusline+=\ %{FileNameSL()}
 set statusline+=\ %m
 set statusline+=%=
@@ -109,6 +107,7 @@ set statusline+=\ ››
 " Fzf
 map <C-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
+nmap <leader>f :Rg<Space>
 
 " Sign column
 set signcolumn=yes
@@ -140,22 +139,6 @@ vnoremap <leader>P "+P
 " Dirvish
 let g:dirvish_mode = ':sort ,^.*[\/],'
 
-" CtrlSF
-nmap <leader>f :CtrlSF<Space>
-vmap <leader>f <ESC>:CtrlSF<Space><C-R><C-W><CR>
-let g:ctrlsf_auto_close = {
-    \ "normal" : 0,
-    \ "compact": 0
-    \}
-let g:ctrlsf_default_view_mode = 'compact'
-let g:ctrlsf_auto_focus = {
-    \ "at": "start"
-    \ }
-let g:ctrlsf_mapping = {
-    \ "next" : "",
-    \ "prev" : "",
-    \ }
-
 " Emmet
 let g:user_emmet_settings = {
 \  'javascript.jsx' : {
@@ -172,15 +155,6 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 
 " Clang format
 autocmd BufWritePre *.c ClangFormat
-
-" Ale
-let g:ale_sign_error = '››'
-let g:ale_linters = {
-\   'javascript': ['eslint', 'flow-language-server'],
-\}
-
-" Go to definition
-nnoremap <C-i> :ALEGoToDefinition<CR>
 
 " Coc
 inoremap <silent><expr> <TAB>

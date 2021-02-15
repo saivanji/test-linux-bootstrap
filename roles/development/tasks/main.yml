@@ -1,0 +1,5 @@
+---
+- name: install rust
+  command: rustup default stable
+  args:
+    creates: /usr/bin/rustc
