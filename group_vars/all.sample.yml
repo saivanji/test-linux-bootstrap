@@ -11,12 +11,11 @@ screen:
 video: intel
 # video: amd
 
+eth_iface: enp7s0
 system_partition: sda3
 
 virt: false
-
 battery: true
-
 backlight: true
 
 font:
@@ -37,3 +36,5 @@ font:
 # screen:
 #   dpi: 144
 #   scale: 1.5
+
+github_notifications_token: 0

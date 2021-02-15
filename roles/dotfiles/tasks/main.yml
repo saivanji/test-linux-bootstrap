@@ -108,6 +108,13 @@
   vars:
     user_idx: "{{ user_idx }}"
 
+- name: github notifications token for polybar
+  become_user: "{{ item.name }}"
+  template:
+    src: .ghnotif.j2
+    dest: "/home/{{ item.name }}/.config/polybar/.ghnotif"
+  loop: "{{ users }}"
+
 - name: polybar config
   become_user: "{{ item.name }}"
   template:
