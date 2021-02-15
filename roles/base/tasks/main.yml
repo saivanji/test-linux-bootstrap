@@ -51,6 +51,7 @@
       - alsa-utils
       - ueberzug
       - translate-shell
+      - exa
 
       # network
       - dhcpcd
