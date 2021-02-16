@@ -49,8 +49,7 @@ module-margin-right = 1
 font-0 = {{ font.monospace.family }}:pixelsize={{ font.monospace.size }};1
 font-1 = Material Design Icons:style=Regular:pixelsize=11;1
 
-modules-left = bspwm
-modules-center = mpd
+modules-left = bspwm mpd
 modules-right = github xkeyboard wlan bluetooth openvpn pulseaudio eth battery date time
 
 tray-position = right
@@ -181,7 +180,7 @@ interval = 10
 
 [module/mpd]
 type = internal/mpd
-format-online = 󰝚 <label-song> <bar-progress> <icon-prev> <toggle> <icon-next>
+format-online = <bar-progress> <icon-prev> <toggle> <icon-next> <label-song>
 label-offline = 󰝛
 icon-prev = 󰒮
 icon-play = 󰐊
