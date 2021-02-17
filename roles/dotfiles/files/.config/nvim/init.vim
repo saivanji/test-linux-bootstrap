@@ -156,6 +156,9 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 " Clang format
 autocmd BufWritePre *.c ClangFormat
 
+" Rust format
+let g:rustfmt_autosave = 1
+
 " Coc
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
