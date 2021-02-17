@@ -53,6 +53,7 @@
       - ueberzug
       - translate-shell
       - exa
+      - bat
 
       # network
       - dhcpcd

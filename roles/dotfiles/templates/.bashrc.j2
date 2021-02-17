@@ -23,3 +23,7 @@ export VIRSH_DEFAULT_CONNECT_URI=qemu:///system
 
 #export GDK_SCALE={{ screen.scale }}
 #export GDK_DPI_SCALE={{ screen.scale }}
+
+batdiff() {
+  git diff --name-only --diff-filter=d | xargs bat --diff
+}
