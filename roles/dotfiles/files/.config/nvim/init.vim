@@ -158,9 +158,3 @@ autocmd BufWritePre *.c ClangFormat
 
 " Rust format
 let g:rustfmt_autosave = 1
-
-" Coc
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
