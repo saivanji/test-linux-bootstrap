@@ -105,6 +105,7 @@
       - bluez
       - bluez-utils
       - thunar
+      - galculator
     state: present
 
 - name: install intel video
