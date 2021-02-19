@@ -108,6 +108,7 @@ set statusline+=\ ››
 map <C-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nmap <leader>f :Rg<Space>
+vmap <leader>f <ESC>:Rg<Space><C-R><C-W><CR>
 
 " Sign column
 set signcolumn=yes
