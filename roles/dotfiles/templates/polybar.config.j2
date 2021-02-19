@@ -50,7 +50,7 @@ font-0 = {{ font.monospace.family }}:pixelsize={{ font.monospace.size }};1
 font-1 = Material Design Icons:style=Regular:pixelsize=11;1
 
 modules-left = bspwm mpd
-modules-right = github xkeyboard wlan bluetooth openvpn pulseaudio eth battery date time
+modules-right = weather github xkeyboard wlan bluetooth openvpn pulseaudio eth battery date time
 
 tray-position = right
 tray-padding = 2
@@ -195,6 +195,11 @@ bar-progress-indicator = |
 bar-progress-fill = ─
 bar-progress-empty = ─
 
+[module/weather]
+type = custom/script
+exec = ~/.config/polybar/scripts/weather_short.sh
+click-left = sh ~/.config/polybar/scripts/weather_full.sh
+interval = 60
 
 [settings]
 screenchange-reload = true
