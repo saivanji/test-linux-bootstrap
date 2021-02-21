@@ -106,6 +106,7 @@
       - bluez-utils
       - thunar
       - galculator
+      - pacman-contrib
     state: present
 
 - name: install intel video

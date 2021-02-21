@@ -1,8 +1,8 @@
 #!/bin/sh
 
-connection=$(pgrep -a openvpn$ | head -n 1 | awk '{print $NF }' | cut -d '.' -f 1)
+CONNECTION=$(pgrep -a openvpn$ | head -n 1 | awk '{print $NF }' | cut -d '.' -f 1)
 
-if [ -n "$connection" ]; then
+if [ -n "$CONNECTION" ]; then
     echo "󰕥"
 else 
     echo "󰦜"
