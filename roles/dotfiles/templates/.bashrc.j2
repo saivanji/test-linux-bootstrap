@@ -32,3 +32,11 @@ l() {
   git add .
   git commit -a -m "$1"
 }
+
+p() {
+  if [ -z "$1" ]; then
+    git push
+  else
+    git push origin $1
+  fi
+}
