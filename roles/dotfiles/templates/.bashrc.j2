@@ -33,10 +33,13 @@ d() {
   git diff --name-only --diff-filter=d | xargs bat --diff
 }
 
+# TODO: "ac"
 s() {
   git add .
   git commit -a -m "$1"
 }
+
+# TODO: "acp"
 
 p() {
   if [ -z "$1" ]; then
