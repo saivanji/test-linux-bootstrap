@@ -33,13 +33,10 @@ d() {
   git diff --name-only --diff-filter=d | xargs bat --diff
 }
 
-# TODO: "ac"
-s() {
+ac() {
   git add .
   git commit -a -m "$1"
 }
-
-# TODO: "acp"
 
 p() {
   if [ -z "$1" ]; then
@@ -47,4 +44,9 @@ p() {
   else
     git push origin $1
   fi
+}
+
+acp() {
+  ac "$1"
+  p
 }
