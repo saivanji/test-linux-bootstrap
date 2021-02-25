@@ -114,3 +114,9 @@ virsh net-start default
 ```
 
 Follow the guide at https://dennisnotes.com/note/20180614-ubuntu-18.04-qemu-setup/ with the exception of skipping the step 8 (network configuration)
+
+## Shell
+Set default shell:
+```
+chsh -s /bin/zsh
+```
