@@ -4,6 +4,9 @@ setglobal nocompatible
 set ttyfast
 " set lazyredraw
 
+" Mouse support
+set mouse=a
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Base
