@@ -17,7 +17,7 @@ Plug 'neoclide/coc.nvim'
 Plug 'justinmk/vim-dirvish'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
-Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers'] }
+Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Rg'] }
 
 " Syntax support
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
