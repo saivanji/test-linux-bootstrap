@@ -120,3 +120,11 @@ Set default shell:
 ```
 chsh -s /bin/zsh
 ```
+
+## Emacs
+```
+M-x package-refresh-contents RET
+M-x package-install-selected-packages RET
+M-x org-roam-db-build-cache
+```
+

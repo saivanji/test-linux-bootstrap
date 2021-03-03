@@ -13,6 +13,20 @@
     recurse: yes
   loop: "{{ users }}"
 
+- name: Knowledge
+  become_user: "{{ item.name }}"
+  file:
+    path: "/home/{{ item.name }}/Knowledge"
+    state: directory
+  loop: "{{ users }}"
+
+- name: Downloads
+  become_user: "{{ item.name }}"
+  file:
+    path: "/home/{{ item.name }}/Downloads"
+    state: directory
+  loop: "{{ users }}"
+
 - name: .config/gtk-3.0 directory
   become_user: "{{ item.name }}"
   file:
@@ -149,3 +163,15 @@
     path: "/home/{{ item.name }}/Screenshots"
     state: directory
   loop: "{{ users }}"
+
+- name: create .emacs.d directory
+  become_user: "{{ users[0].name }}"
+  file:
+    path: "/home/{{ users[0].name }}/.emacs.d"
+    state: directory
+
+- name: clone Spacemacs
+  become_user: "{{ users[0].name }}"
+  git:
+    repo: https://github.com/syl20bnr/spacemacs
+    dest: "/home/{{ users[0].name }}/.emacs.d"

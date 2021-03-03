@@ -7,6 +7,7 @@ include /etc/firejail/default.profile
 env TMPDIR=/tmp
 
 whitelist ${HOME}/.local/share/nvim/plugged
+whitelist ${HOME}/.config/nvim
 whitelist ${HOME}/.config/coc
 whitelist ${HOME}/Projects
 whitelist ${HOME}/.eslintrc.js
