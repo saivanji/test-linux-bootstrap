@@ -32,6 +32,7 @@
       # editors
       - neovim
       - vim
+      - emacs
 
       # fonts
       - noto-fonts
@@ -109,6 +110,7 @@
       - thunar
       - galculator
       - pacman-contrib
+      - sqlite
     state: present
 
 - name: install intel video
