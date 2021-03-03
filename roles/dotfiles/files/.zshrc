@@ -1,6 +1,7 @@
 # export PATH=/usr/local/bin:$PATH
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export FZF_DEFAULT_COMMAND='fd --type f'
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
