@@ -121,7 +121,6 @@ Set default shell:
 chsh -s /bin/zsh
 ```
 
-TODO: remove spacemacs and probably have something like emacs nano
 ## Emacs
 ```
 M-x package-refresh-contents RET
