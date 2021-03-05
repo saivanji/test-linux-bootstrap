@@ -32,7 +32,6 @@
       # editors
       - neovim
       - vim
-      - emacs
 
       # fonts
       - noto-fonts
