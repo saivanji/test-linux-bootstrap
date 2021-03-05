@@ -87,3 +87,7 @@ function acp() {
   ac "$1"
   p
 }
+
+function cl() {
+  clear
+}
