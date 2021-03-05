@@ -59,6 +59,10 @@ function x() {
 }
 
 function l() {
+  exa $@
+}
+
+function ll() {
   exa -la $@
 }
 
