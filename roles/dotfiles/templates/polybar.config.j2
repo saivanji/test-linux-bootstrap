@@ -50,7 +50,7 @@ font-0 = {{ font.monospace.family }}:pixelsize={{ font.monospace.size }};1
 font-1 = Material Design Icons:style=Regular:pixelsize=11;1
 
 modules-left = bspwm mpd
-modules-right = weather updates github xkeyboard wlan bluetooth openvpn memory pulseaudio eth battery date time
+modules-right = weather updates github xkeyboard wlan bluetooth openvpn cpu memory pulseaudio eth battery date time
 
 tray-position = right
 tray-padding = 2
@@ -212,6 +212,19 @@ type = internal/memory
 format = <label>
 label = 󰍛 %gb_used%
 interval = 5
+
+[module/cpu]
+type = internal/cpu
+interval = 3
+format = <ramp-load>
+ramp-load-0 = ▁
+ramp-load-1 = ▂
+ramp-load-2 = ▃
+ramp-load-3 = ▄
+ramp-load-4 = ▅
+ramp-load-5 = ▆
+ramp-load-6 = ▇
+ramp-load-7 = █
 
 [settings]
 screenchange-reload = true

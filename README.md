@@ -120,3 +120,14 @@ Set default shell:
 ```
 chsh -s /bin/zsh
 ```
+
+## Dropbox
+Execute to add Dropbox key:
+```
+gpg --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+```
+
+Enable user dropbox service:
+```
+systemctl --user enable dropbox.service
+```

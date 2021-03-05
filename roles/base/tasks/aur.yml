@@ -21,3 +21,9 @@
   git:
     repo: https://aur.archlinux.org/visual-studio-code-bin.git
     dest: "/home/{{ users[0].name }}/Aur/code"
+
+- name: clone Dropbox
+  become_user: "{{ users[0].name }}"
+  git:
+    repo: https://aur.archlinux.org/dropbox.git
+    dest: "/home/{{ users[0].name }}/Aur/dropbox"
