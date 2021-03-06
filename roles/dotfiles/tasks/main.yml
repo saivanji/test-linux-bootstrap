@@ -150,13 +150,6 @@
     state: directory
   loop: "{{ users }}"
 
-- name: create ~/Knowledge directory
-  become_user: "{{ item.name }}"
-  file:
-    path: "/home/{{ item.name }}/Knowledge"
-    state: directory
-  loop: "{{ users }}"
-
 - name: create ~/Downloads directory
   become_user: "{{ item.name }}"
   file:
@@ -164,7 +157,7 @@
     state: directory
   loop: "{{ users }}"
 
-- name: create react-only ~/.dropbox-dist directory to prevent auto update
+- name: create read-only ~/.dropbox-dist directory to prevent auto update
   become_user: "{{ item.name }}"
   file:
     path: "/home/{{ item.name }}/.dropbox-dist"
