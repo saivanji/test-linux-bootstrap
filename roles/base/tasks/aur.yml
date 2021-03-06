@@ -27,3 +27,9 @@
   git:
     repo: https://aur.archlinux.org/dropbox.git
     dest: "/home/{{ users[0].name }}/Aur/dropbox"
+
+- name: clone Obsidian
+  become_user: "{{ users[0].name }}"
+  git:
+    repo: https://aur.archlinux.org/obsidian-appimage.git
+    dest: "/home/{{ users[0].name }}/Aur/obsidian"
