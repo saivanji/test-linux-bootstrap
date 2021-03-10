@@ -13,8 +13,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'dense-analysis/ale'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'dense-analysis/ale'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'justinmk/vim-dirvish'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
@@ -166,64 +167,64 @@ autocmd BufWritePre *.c ClangFormat
 " Rust format
 let g:rustfmt_autosave = 1
 
-" Ale
-let g:ale_sign_error = '››'
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'rust': ['cargo', 'rls'],
-\}
-let g:ale_floating_preview = 1
-let g:ale_cursor_detail = 1
-let g:ale_echo_cursor = 0
-
-" Deoplete
-let g:deoplete#enable_at_startup = 0
-" Enabling deoplete on entering insert mode to improve vim loading speed
-autocmd InsertEnter * call deoplete#enable()
-" Tab completion
-inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
-inoremap <expr><S-TAB>  pumvisible() ? "\<UP>" : "\<S-TAB>"
-
-call deoplete#custom#option('sources', {
-\ '_': ['ale'],
-\})
-
-" Go to definition
-nnoremap <C-i> :ALEGoToDefinition<CR>
-nnoremap <silent> K :ALEHover<CR>
-
-" " CoC
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
-
-" " Use K to show documentation in preview window.
-" nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-" function! s:show_documentation()
-"   if (index(['vim','help'], &filetype) >= 0)
-"     execute 'h '.expand('<cword>')
-"   elseif (coc#rpc#ready())
-"     call CocActionAsync('doHover')
-"   else
-"     execute '!' . &keywordprg . " " . expand('<cword>')
-"   endif
-" endfunction
+" " Ale
+" let g:ale_sign_error = '››'
+" let g:ale_linters = {
+" \   'javascript': ['eslint'],
+" \   'rust': ['cargo', 'rls'],
+" \}
+" let g:ale_floating_preview = 1
+" let g:ale_cursor_detail = 1
+" let g:ale_echo_cursor = 0
 
 " " Go to definition
-" nnoremap <C-i> :call CocAction('jumpDefinition')<CR>
+" nnoremap <C-i> :ALEGoToDefinition<CR>
+" nnoremap <silent> K :ALEHover<CR>
 
-" " Remap <C-f> and <C-b> for scroll float windows/popups.
-" nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-" nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-" inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-" inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-" vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-" vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+" " Deoplete
+" let g:deoplete#enable_at_startup = 0
+" " Enabling deoplete on entering insert mode to improve vim loading speed
+" autocmd InsertEnter * call deoplete#enable()
+" " Tab completion
+" inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
+" inoremap <expr><S-TAB>  pumvisible() ? "\<UP>" : "\<S-TAB>"
+
+" call deoplete#custom#option('sources', {
+" \ '_': ['ale'],
+" \})
+
+" CoC
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Go to definition
+nnoremap <C-i> :call CocAction('jumpDefinition')<CR>
+
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
