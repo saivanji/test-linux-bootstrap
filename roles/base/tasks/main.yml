@@ -92,9 +92,11 @@
       - docker-compose
       - gcc
       - clang
+      - python-pip
       - base-devel
       - postgresql
       - rustup
+      # - rust-analyzer
 
       # other
       - unzip
