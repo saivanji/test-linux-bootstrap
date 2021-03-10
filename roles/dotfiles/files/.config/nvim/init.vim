@@ -169,7 +169,7 @@ let g:rustfmt_autosave = 1
 " Ale
 let g:ale_sign_error = '››'
 let g:ale_linters = {
-\   'javascript': ['eslint', 'flow-language-server'],
+\   'javascript': ['eslint'],
 \   'rust': ['cargo', 'rls'],
 \}
 let g:ale_floating_preview = 1
@@ -180,6 +180,9 @@ let g:ale_echo_cursor = 0
 let g:deoplete#enable_at_startup = 0
 " Enabling deoplete on entering insert mode to improve vim loading speed
 autocmd InsertEnter * call deoplete#enable()
+" Tab completion
+inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<UP>" : "\<S-TAB>"
 
 call deoplete#custom#option('sources', {
 \ '_': ['ale'],
