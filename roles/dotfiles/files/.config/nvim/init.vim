@@ -14,7 +14,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'justinmk/vim-dirvish'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
