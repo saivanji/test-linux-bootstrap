@@ -136,3 +136,6 @@ Enable user dropbox service:
 ```
 systemctl --user enable dropbox.service
 ```
+
+# TODO:
+- Integrate nvim lsp and rust analyzer
