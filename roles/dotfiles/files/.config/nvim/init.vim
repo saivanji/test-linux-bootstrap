@@ -16,7 +16,7 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'justinmk/vim-dirvish'
 Plug 'jiangmiao/auto-pairs'
-Plug 'joshdick/onedark.vim'
+Plug 'aiven715/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Rg'] }
 
