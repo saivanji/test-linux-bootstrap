@@ -84,7 +84,7 @@ set smartcase
 set noshowmode
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'material',
+      \ 'colorscheme': 'onedark',
       \ }
 
 " Fzf
