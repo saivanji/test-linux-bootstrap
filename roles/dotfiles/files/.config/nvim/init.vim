@@ -14,11 +14,10 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'dense-analysis/ale'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'justinmk/vim-dirvish'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Rg'] }
 
 " Syntax support
@@ -82,34 +81,11 @@ set noignorecase
 set smartcase
 
 " Statusline
-function! FileTypeSL()
-  let l:filetype = &ft
-
-  return strlen(l:filetype) ? ' :: ' . l:filetype : ''
-endfunction
-
-function! FileNameSL()
-  let l:filepath = expand('%:p')
-  let l:visible = 30
-  let l:name = strlen(filepath) > l:visible ? "..." . strpart(l:filepath, strlen(l:filepath) - l:visible) : l:filepath
-
-  return strlen(l:name) ? '‹‹ ' . l:name . ' ››' : l:name
-endfunction
-
-function! LineNrSL()
-  return '' . line(".")
-endfunction
-
+set noshowmode
 set laststatus=2
-set statusline=
-set statusline+=\ %{FileNameSL()}
-set statusline+=\ %m
-set statusline+=%=
-set statusline+=\ ‹‹
-set statusline+=\ %{LineNrSL()}
-set statusline+=\ %p%%
-set statusline+=\%{FileTypeSL()}
-set statusline+=\ ››
+let g:lightline = {
+      \ 'colorscheme': 'material',
+      \ }
 
 " Fzf
 map <C-p> :Files<CR>
@@ -166,32 +142,6 @@ autocmd BufWritePre *.c ClangFormat
 
 " Rust format
 let g:rustfmt_autosave = 1
-
-" " Ale
-" let g:ale_sign_error = '››'
-" let g:ale_linters = {
-" \   'javascript': ['eslint'],
-" \   'rust': ['cargo', 'rls'],
-" \}
-" let g:ale_floating_preview = 1
-" let g:ale_cursor_detail = 1
-" let g:ale_echo_cursor = 0
-
-" " Go to definition
-" nnoremap <C-i> :ALEGoToDefinition<CR>
-" nnoremap <silent> K :ALEHover<CR>
-
-" " Deoplete
-" let g:deoplete#enable_at_startup = 0
-" " Enabling deoplete on entering insert mode to improve vim loading speed
-" autocmd InsertEnter * call deoplete#enable()
-" " Tab completion
-" inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
-" inoremap <expr><S-TAB>  pumvisible() ? "\<UP>" : "\<S-TAB>"
-
-" call deoplete#custom#option('sources', {
-" \ '_': ['ale'],
-" \})
 
 " CoC
 inoremap <silent><expr> <TAB>
