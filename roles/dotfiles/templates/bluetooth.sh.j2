@@ -1,13 +1,13 @@
 #!/bin/sh
 if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]
 then
-  echo "󰂲"
+  echo "%{F{{ colors.normal.black }}}󰂲%{F-}"
 else
   ALIAS=$(echo info | bluetoothctl | grep -Po 'Alias: \K.+')
   if [[ $ALIAS ]]
   then 
-    echo "󰂱 "$ALIAS
+    echo "%{F{{ colors.normal.blue }}}󰂱%{F-} "$ALIAS
   else
-    echo "󰂯"
+    echo "%{F{{ colors.normal.blue }}}󰂯%{F-}"
   fi
 fi
