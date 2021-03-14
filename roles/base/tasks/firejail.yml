@@ -1,3 +1,8 @@
+- name: copy firejail config
+  copy:
+    src: firejail.config
+    dest: /etc/firejail/firejail.config
+
 - name: jail firefox
   file:
     src: /usr/bin/firejail
