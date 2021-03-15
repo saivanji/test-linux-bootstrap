@@ -1,4 +1,10 @@
 ---
+- name: configure pacman multilib repo
+  replace:
+    path: /etc/pacman.conf
+    regexp: '^#(\[multilib\])\n^#(.*)$'
+    replace: '\1\n\2'
+
 - name: install packages
   pacman:
     # update_cache: yes
@@ -97,6 +103,9 @@
       - postgresql
       - rustup
       # - rust-analyzer
+
+      # game
+      # - steam
 
       # other
       - unzip
