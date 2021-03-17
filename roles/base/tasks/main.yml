@@ -71,6 +71,7 @@
       - mpd
       - libmpdclient
       - ncmpcpp
+      - libldac
 
       # video
       - mpv

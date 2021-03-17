@@ -33,3 +33,9 @@
   git:
     repo: https://aur.archlinux.org/obsidian-appimage.git
     dest: "/home/{{ users[0].name }}/Aur/obsidian"
+
+- name: clone pulseaudio-modules-bt
+  become_user: "{{ users[0].name }}"
+  git:
+    repo: https://aur.archlinux.org/pulseaudio-modules-bt.git
+    dest: "/home/{{ users[0].name }}/Aur/pulseaudio-modules-bt"
