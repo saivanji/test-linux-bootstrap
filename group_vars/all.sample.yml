@@ -40,10 +40,10 @@ colors:
 
 font:
   sans:
-    family: Fira Sans
+    family: Ubuntu
     size: 11
   monospace:
-    family: Fantasque Sans Mono
+    family: Ubuntu Mono
     size: 12
 # screen:
 #   dpi: 128
