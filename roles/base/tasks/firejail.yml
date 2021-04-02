@@ -21,29 +21,29 @@
     dest: /usr/local/bin/chromium
     state: link
 
-- name: jail node
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/node
-    state: link
+# - name: jail node
+#   file:
+#     src: /usr/bin/firejail
+#     dest: /usr/local/bin/node
+#     state: link
 
-- name: jail npm
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/npm
-    state: link
+# - name: jail npm
+#   file:
+#     src: /usr/bin/firejail
+#     dest: /usr/local/bin/npm
+#     state: link
 
-- name: jail npx
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/npx
-    state: link
+# - name: jail npx
+#   file:
+#     src: /usr/bin/firejail
+#     dest: /usr/local/bin/npx
+#     state: link
 
-- name: jail yarn
-  file:
-    src: /usr/bin/firejail
-    dest: /usr/local/bin/yarn
-    state: link
+# - name: jail yarn
+#   file:
+#     src: /usr/bin/firejail
+#     dest: /usr/local/bin/yarn
+#     state: link
 
 - name: jail telegram-desktop
   file:
