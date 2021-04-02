@@ -23,6 +23,7 @@
       - rofi
       - feh
       - gnome-themes-extra
+      - adwaita-icon-theme
 
       # browsers
       - chromium
