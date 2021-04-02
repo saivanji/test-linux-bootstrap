@@ -5,8 +5,8 @@
     creates: /boot/EFI/
 
 - name: create loader.conf
-  copy:
-    src: loader.conf
+  template:
+    src: loader.conf.j2
     dest: /boot/loader/loader.conf
 
 - name: create arch.conf
