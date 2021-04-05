@@ -32,7 +32,7 @@ Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
 " Formatting
 Plug 'rhysd/vim-clang-format', { 'for': ['c'] }
 Plug 'prettier/vim-prettier', {
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'for': ['javascript', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " Other
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'typescript'] }
