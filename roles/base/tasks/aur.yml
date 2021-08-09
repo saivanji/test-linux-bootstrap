@@ -39,3 +39,15 @@
   git:
     repo: https://aur.archlinux.org/pulseaudio-modules-bt.git
     dest: "/home/{{ users[0].name }}/Aur/pulseaudio-modules-bt"
+
+- name: clone Slack
+  become_user: "{{ users[0].name }}"
+  git:
+    repo: https://aur.archlinux.org/slack-desktop.git
+    dest: "/home/{{ users[0].name }}/Aur/slack"
+
+- name: clone Zoom
+  become_user: "{{ users[0].name }}"
+  git:
+    repo: https://aur.archlinux.org/zoom.git
+    dest: "/home/{{ users[0].name }}/Aur/zoom"
