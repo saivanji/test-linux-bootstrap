@@ -159,4 +159,4 @@
   when: virt == true
 
 - include: aur.yml
-- include: firejail.yml
+#- include: firejail.yml
