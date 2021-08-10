@@ -68,7 +68,7 @@
 
       # audio
       - pulseaudio
-      - pulseaudio-bluetooth
+      # - pulseaudio-bluetooth
       - mpd
       - libmpdclient
       - ncmpcpp
