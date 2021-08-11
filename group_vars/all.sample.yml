@@ -42,10 +42,10 @@ colors:
 
 font:
   sans:
-    family: Ubuntu
+    family: Cantarell Regular
     size: 11
   monospace:
-    family: Ubuntu Mono
+    family: Fantasque Sans Mono
     size: 12
 # screen:
 #   dpi: 128
