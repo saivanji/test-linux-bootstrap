@@ -89,7 +89,7 @@ pip3 install --user pynvim
 ```
 
 - Run :PlugInstall
-- Run :CocInstall coc-tsserver coc-eslint coc-json coc-html coc-css coc-highlight coc-rust-analyzer coc-clangd
+- Run :CocInstall coc-tsserver coc-eslint coc-json coc-html coc-css coc-highlight coc-rust-analyzer coc-clangd coc-go
 
 ## Rust
 

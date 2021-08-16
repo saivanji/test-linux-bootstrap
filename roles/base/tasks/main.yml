@@ -98,6 +98,8 @@
       - base-devel
       - postgresql
       - rustup
+      - go
+      - go-tools
       # - rust-analyzer
 
       # other
