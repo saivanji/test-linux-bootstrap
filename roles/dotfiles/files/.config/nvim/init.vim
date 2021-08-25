@@ -169,6 +169,7 @@ function! s:show_documentation()
 endfunction
 
 " Go to definition
+nnoremap <C-A-i> :call CocAction('jumpDefinition', 'vsplit')<CR>
 nnoremap <C-i> :call CocAction('jumpDefinition')<CR>
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
