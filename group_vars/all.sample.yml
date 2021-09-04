@@ -39,6 +39,12 @@ colors:
     magenta: '#c678dd'
     cyan:    '#56b6c2'
     white:   '#3e4452'
+  background: '#040406'
+  ui:
+    white: '#c5c8c6'
+    gray: '#4B5563'
+    dark: '#111827'
+
 
 font:
   sans:
