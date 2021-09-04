@@ -51,7 +51,7 @@ font:
     family: Cantarell Regular
     size: 11
   monospace:
-    family: Fantasque Sans Mono
+    family: Noto Sans Mono
     size: 12
 # screen:
 #   dpi: 128
