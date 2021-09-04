@@ -58,6 +58,7 @@
       - translate-shell
       - exa
       - bat
+      - gnu-netcat
 
       # network
       - dhcpcd
