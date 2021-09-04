@@ -37,7 +37,7 @@ font-0 = {{ font.monospace.family }}:pixelsize={{ font.monospace.size }};1
 font-1 = Material Design Icons:style=Regular:pixelsize=11;1
 
 modules-left = bspwm mpd
-modules-right = weather updates xkeyboard wlan bluetooth cpu memory pulseaudio eth battery date time
+modules-right = weather updates xkeyboard wlan bluetooth cpu memory pulseaudio eth battery date
 
 tray-position = right
 tray-padding = 2
@@ -110,14 +110,8 @@ format-disconnected =
 [module/date]
 type = internal/date
 interval = 5
-date = %A, %d %b %Y
+date = %A, %d %b %Y / %H:%M
 label = 󰃭 %date%
-
-[module/time]
-type = internal/date
-interval = 5
-time = %H:%M
-label = 󰅐 %time%
 
 [module/battery]
 type = internal/battery
@@ -175,8 +169,7 @@ bar-progress-empty = ─
 
 [module/weather]
 type = custom/script
-exec = ~/.config/polybar/scripts/weather_short.sh
-click-left = sh ~/.config/polybar/scripts/weather_full.sh
+exec = ~/.config/polybar/scripts/weather.sh
 interval = 60
 
 [module/updates]

@@ -36,6 +36,7 @@
 
       # fonts
       - noto-fonts
+      - noto-fonts-emoji
       - ttf-dejavu
       - ttf-roboto
       - ttf-liberation
