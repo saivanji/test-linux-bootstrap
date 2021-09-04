@@ -20,7 +20,7 @@
 width = 100%
 height = 44
 radius = 0
-fixed-center = false
+fixed-center = true
 
 background = {{ colors.background }}
 foreground = {{ colors.ui.white }}
@@ -37,7 +37,8 @@ font-0 = {{ font.monospace.family }}:pixelsize={{ font.monospace.size }};1
 font-1 = Material Design Icons:style=Regular:pixelsize=11;1
 
 modules-left = bspwm mpd
-modules-right = weather updates xkeyboard wlan bluetooth cpu memory pulseaudio eth battery date
+modules-center = date
+modules-right = updates xkeyboard wlan bluetooth cpu memory pulseaudio eth battery
 
 tray-position = right
 tray-padding = 2
@@ -51,7 +52,7 @@ dpi = {{ screen.dpi }}
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
-label-layout = 󰌌 %layout%
+label-layout = %layout%
 
 [module/bspwm]
 type = internal/bspwm
@@ -110,8 +111,8 @@ format-disconnected =
 [module/date]
 type = internal/date
 interval = 5
-date = %A, %d %b %Y / %H:%M
-label = 󰃭 %date%
+date = %a, %b %d %H:%M
+label = %date%
 
 [module/battery]
 type = internal/battery
