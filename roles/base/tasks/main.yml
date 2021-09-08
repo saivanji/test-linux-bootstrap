@@ -118,6 +118,7 @@
       - galculator
       - pacman-contrib
       - sqlite
+      - aws-cli
     state: present
 
 - name: install intel video
