@@ -82,6 +82,8 @@
 
       # viewers
       - atril
+      - zathura
+      - zathura-pdf-mupdf
 
       # photo
       - gimp
