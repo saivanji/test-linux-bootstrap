@@ -14,6 +14,8 @@ video: intel
 eth_iface: enp7s0
 system_partition: sda3
 
+gfx: true
+ssh: false
 boot_timeout: 0
 
 virt: false
