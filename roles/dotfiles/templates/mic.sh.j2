@@ -3,5 +3,5 @@ if [ $(amixer | grep "Capture.*\[on\]" | wc -c) -eq 0 ]
 then
   echo "%{F{{ colors.ui.gray }}}󰍭%{F-}"
 else
-  echo "%{F{{ colors.ui.red }}}󰍬%{F-}"
+  echo "%{F{{ colors.normal.red }}}󰍬%{F-}"
 fi
