@@ -33,7 +33,7 @@ font-0 = {{ font.monospace.family }}:pixelsize={{ font.monospace.size }};1
 font-1 = Material Design Icons:style=Regular:pixelsize=11;1
 modules-left = bspwm mpd
 modules-center = date
-modules-right = updates xkeyboard wlan bluetooth cpu memory pulseaudio eth battery
+modules-right = updates xkeyboard wlan mic bluetooth cpu memory pulseaudio eth battery
 tray-position = right
 tray-padding = 2
 wm-restack = bspwm
@@ -208,6 +208,12 @@ ramp-load-4 = ▅
 ramp-load-5 = ▆
 ramp-load-6 = ▇
 ramp-load-7 = █
+
+[module/mic]
+type = custom/script
+exec = ~/.config/polybar/scripts/mic.sh
+click-left = sh ~/.config/polybar/scripts/mic-toggle.sh
+interval = 2
 
 [settings]
 screenchange-reload = true

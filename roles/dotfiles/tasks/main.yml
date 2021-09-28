@@ -114,6 +114,13 @@
     dest: "/home/{{ item.name }}/.config/polybar/config"
   loop: "{{ users }}"
 
+- name: mic.sh
+  become_user: "{{ item.name }}"
+  template:
+    src: mic.sh.j2
+    dest: "/home/{{ item.name }}/.config/polybar/scripts/mic.sh"
+  loop: "{{ users }}"
+
 - name: bluetooth.sh
   become_user: "{{ item.name }}"
   template:
