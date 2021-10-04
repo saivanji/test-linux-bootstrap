@@ -76,6 +76,10 @@
       - ncmpcpp
       - libldac
 
+      # camera
+      v4l-utils
+      guvcview
+
       # video
       - mpv
       - youtube-dl
