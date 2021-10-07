@@ -59,6 +59,8 @@
       - exa
       - bat
       - gnu-netcat
+      - zip
+      - unzip
 
       # network
       - dhcpcd
@@ -111,7 +113,6 @@
       # - rust-analyzer
 
       # other
-      - unzip
       - firejail
       - vifm
       - ranger
