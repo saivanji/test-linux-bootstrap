@@ -29,6 +29,7 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'jparise/vim-graphql', { 'for': ['graphql'] }
 Plug 'digitaltoad/vim-pug', { 'for': ['pug'] }
 Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
+Plug 'pantharshit00/vim-prisma', { 'for': ['prisma'] }
 
 " Formatting
 Plug 'rhysd/vim-clang-format', { 'for': ['c'] }
