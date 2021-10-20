@@ -79,8 +79,8 @@
       - libldac
 
       # camera
-      v4l-utils
-      guvcview
+      - v4l-utils
+      - guvcview
 
       # video
       - mpv

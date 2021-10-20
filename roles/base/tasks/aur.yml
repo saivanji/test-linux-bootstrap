@@ -51,3 +51,9 @@
   git:
     repo: https://aur.archlinux.org/zoom.git
     dest: "/home/{{ users[0].name }}/Aur/zoom"
+
+- name: clone nvm
+  become_user: "{{ users[0].name }}"
+  git:
+    repo: https://aur.archlinux.org/nvm.git
+    dest: "/home/{{ users[0].name }}/Aur/nvm"
