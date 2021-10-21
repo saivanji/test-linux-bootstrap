@@ -57,7 +57,6 @@ s() {
   startx -- -ardelay 200 -arinterval 30
 }
 
-nvmx() {
-  source /usr/share/nvm/init-nvm.sh &&
-  nvm $@
+init_nvm() {
+  source /usr/share/nvm/init-nvm.sh
 }
