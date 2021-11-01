@@ -24,6 +24,7 @@
       - feh
       - gnome-themes-extra
       - adwaita-icon-theme
+      - plank
 
       # browsers
       - chromium
