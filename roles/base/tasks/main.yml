@@ -92,6 +92,7 @@
       - atril
       - zathura
       - zathura-pdf-mupdf
+      - newsflash
 
       # photo
       - gimp
