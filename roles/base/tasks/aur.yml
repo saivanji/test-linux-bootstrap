@@ -69,3 +69,9 @@
   git:
     repo: https://aur.archlinux.org/postman-bin.git
     dest: "/home/{{ users[0].name }}/Aur/postman"
+
+- name: clone insomnia
+  become_user: "{{ users[0].name }}"
+  git:
+    repo: https://aur.archlinux.org/insomnia-bin.git
+    dest: "/home/{{ users[0].name }}/Aur/insomnia"
